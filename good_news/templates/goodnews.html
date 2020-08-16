@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<title> Good News </title>
+<meta property="og:title" content="Good News">
+<meta property="og:description" content="Positive News from 60 sources using NLP">
+<meta property="og:image" content="{{ url_for('good_news_bp.static', filename='metaimg.png') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('good_news_bp.static', filename='style/goodnews.css') }}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163899917-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163899917-1');
+</script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+
+<div class="container bg-white text-dark my-md-3 py-md-1">
+  <h1 class="text-center"> Positive News From Around the World </h1>
+  <h6 class="text-center"> On {{day}}</h6>
+  <p class = "text-center"><i> Good news, good news, good news</i><br>
+
+<i>That's all they wanna hear</i> <b>- Mac Miller </b>
+</p>
+<p>
+  <div style="text-align: center;">
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AboutProject" aria-expanded="false" aria-controls="collapseExample">About the Project
+  </button>
+</div>
+
+</p>
+<div class="collapse" id="AboutProject">
+  <div class="card card-body">
+    <p> After scrolling through my phone for hours on end, looking for any positive news in the midst of the current
+  pandemic, I decided it was time to automate the process. I learnt about Natural Language Processing in one of my Data Science classes. I thought it would be fun to see if I could collect all the positive news from major sources. The project took about a week. I used Natural Lanuage Toolkit and Flask for the backend and Bootstrap for the frontend.</p><p> The website is updated every 24 hours. Using Natural Language Processing and with the help of News API, headlines from 60 sources (listed at page end) are sifted through and the top "positive" ones are selected. The program uses a Sentiment Analyzer to assign scores to headlines. Then the top ones are selected to be shown here. It was a great learning oppurtunity and I hope to use the skills I learnt here to make more complex programs. </p>
+  <p> Sentiment Analysis on its own can be a bit peculiar in what it classifies as positive news. It looks for the headlines with the highest positive semantical score, hence, even though there might be great news about the coronavirus pandemic ending, but if its intertwined with highly negative words like 'pandemic', it might not show up on this website. The point being, don't stop checking your regular newspaper.</p>
+
+<p align = "center"> *** These algorithm-generated articles are not a reflection of my opinions. ***</p><br>
+<p><i>Emad Siddiq<br>
+	18<sup>th</sup> April 2020
+</i></p>
+  </div>
+</div>
+
+<div class = "container">
+{% for i in range(vertical) %}
+ <div class="row">
+
+  {% for j in range(2) %}
+  {% set index = 2*i + j%}
+
+    <div class="col-sm-6 my-3">
+        <div class="hover hover-1 text-white rounded">
+          <a href="{{data[index]['url']}}" target="_blank"> <img src="{{ data[index]['urlToImage'] }}" alt="">
+          <div class="hover-overlay"></div>
+            <div class="hover-1-content px-5 py-4">
+              <h6 class="source hover-1-title text-uppercase font-weight-bold mb-1"> {{data[index]['source']['name']}} </h6>
+              <h6 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light"> {{data[index]['title']}}</span></h6>
+        
+          </a>
+        </div>
+        </div>
+   </div>
+
+  {% endfor %}
+</div>
+{% endfor %}
+</div>
+
+<div class = "container my-5">
+  <div style="text-align: center;">
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Sources" aria-expanded="false" aria-controls="collapseExample">Sources
+  </button>
+</div>
+</p>
+<div class="collapse" id="Sources">
+	<p>{% for i in source_names %}<i>{{ i }}</i> ~  {% endfor %}</p>
+</div>
+
+</html>
