@@ -1,0 +1,12 @@
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[32mGET /pashto HTTP/1.1[0m" 308 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[37mGET /pashto/ HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[37mGET /pashto/pashto/static/style/definition.css HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[37mGET /pashto/pashto/static/scripts/pashto.js HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[37mGET /pashto/pashto/static/style/main.css HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:32] "[37mGET /pashto/pashto/static/style/search.css HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:32] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:33] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:33] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:34] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [16/Aug/2020 16:27:35] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
