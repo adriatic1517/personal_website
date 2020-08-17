@@ -60,13 +60,13 @@ class StringGrouper(object):
                 (duplicates is not None and not StringGrouper._is_series_of_strings(duplicates)):
             raise TypeError('Input does not consist of pandas.Series containing only Strings')
 
-        self._config: StringGrouperConfig = StringGrouperConfig(**kwargs)
-        self._master: pd.Series = master.reset_index(drop=True)
-        self._duplicates: pd.Series = duplicates.reset_index(drop=True) if duplicates is not None else None
+        self._config = StringGrouperConfig(**kwargs)
+        self._master = master.reset_index(drop=True)
+        self._duplicates = duplicates.reset_index(drop=True) if duplicates is not None else None
         self.is_build = False  # indicates if the grouper was fit or not
         self._vectorizer = TfidfVectorizer(min_df=1, analyzer=self.n_grams)
         # After the StringGrouper is build, _matches_list will contain the indices and similarities of two matches
-        self._matches_list: pd.DataFrame = pd.DataFrame()
+        self._matches_list = pd.DataFrame()
 
     def n_grams(self, string: str):
         """
