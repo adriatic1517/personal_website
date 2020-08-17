@@ -2,10 +2,10 @@ from flask import Flask, Blueprint, request, render_template, jsonify, make_resp
 
 
 import json
-from pashto.tries import Trie, Node
+from personal_website.pashto.tries import Trie, Node
 import pandas as pd
 import numpy as np
-from pashto.string_grouper import match_strings, StringGrouper
+from personal_website.pashto.string_grouper import match_strings, StringGrouper
 
 
 with open('pashto/data/Pashto_Raverty_full.json') as json_file:
