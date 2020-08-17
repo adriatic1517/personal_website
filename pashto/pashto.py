@@ -5,7 +5,7 @@ import json
 from pashto.tries import Trie, Node
 import pandas as pd
 import numpy as np
-from pashto.string_grouper import match_strings, match_most_similar, group_similar_strings, StringGrouper
+from pashto.string_grouper import match_strings, StringGrouper
 
 
 with open('pashto/data/Pashto_Raverty_full.json') as json_file:
