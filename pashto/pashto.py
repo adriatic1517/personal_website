@@ -40,7 +40,7 @@ def get_close_matches(user_input):
 
 pashto_bp = Blueprint('pashto_bp', __name__,
     template_folder='templates',
-    static_folder='static', static_url_path='pashto/static')
+    static_folder='static', static_url_path='pashto/static', url_prefix="/pashto")
 
 
 
