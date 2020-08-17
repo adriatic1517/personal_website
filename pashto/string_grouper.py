@@ -86,9 +86,7 @@ class StringGrouper(object):
         :param kwargs: All other keyword arguments are passed to StringGrouperConfig
         """
         # Validate input
-        if not StringGrouper._is_series_of_strings(master) or \
-                (duplicates is not None and not StringGrouper._is_series_of_strings(duplicates)):
-            raise TypeError('Input does not consist of pandas.Series containing only Strings')
+        
 
         self._config= StringGrouperConfig(**kwargs)
         self._master= master.reset_index(drop=True)
