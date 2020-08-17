@@ -1,7 +1,7 @@
 from flask import Flask
-from pashto import pashto_bp
-from good_news import good_news_bp
-from resume import resume_bp
+from pashto.pashto import pashto_bp
+from good_news.good_news import good_news_bp
+from resume.resume import resume_bp
 
 app = Flask(__name__)
 
