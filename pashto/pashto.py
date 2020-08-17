@@ -7,12 +7,13 @@ import pandas as pd
 import numpy as np
 from personal_website.pashto.string_grouper import match_strings, StringGrouper
 
-with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
+with open('pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
 
 def log_error(e):
-    with open('/home/e/em/emadsiddiq/app/personal_website/pashto/log.txt', 'w') as log:
-        log.write(e)
+    print("Error" + str(e))
+    with open('pashto/log.txt', 'a') as file:
+        file.write(str(e))
 
 
 
@@ -27,8 +28,8 @@ for i in words_dict:
         choices.append(words_dict[i]['pashto'])
         choices.append(words_dict[i]['phonetic'])
 
-
-df = pd.read_json('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json').transpose()
+#/home/e/em/emadsiddiq/app/personal_website/
+df = pd.read_json('pashto/data/Pashto_Raverty_full.json').transpose()
 
 def get_close_matches(user_input):
     search_terms = pd.Series([user_input])
