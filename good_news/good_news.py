@@ -1,7 +1,7 @@
 import functools
 import logging
 from flask import Flask, Blueprint, render_template
-from good_news.goodnews import *
+from personal_website.good_news.goodnews import *
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
