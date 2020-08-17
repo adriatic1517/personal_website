@@ -7,6 +7,6 @@ app = Flask(__name__)
 
 app.register_blueprint(pashto_bp, url_prefix='/pashto')
 app.register_blueprint(good_news_bp, url_prefix='/good_news')
-app.register_blueprint(resume_bp, url_prefix='/home')
+app.register_blueprint(resume_bp, url_prefix='/')
 
 
