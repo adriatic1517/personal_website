@@ -7,9 +7,16 @@ import pandas as pd
 import numpy as np
 from personal_website.pashto.string_grouper import match_strings, StringGrouper
 
-
 with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
+
+def log_error(e):
+    with open('/home/e/em/emadsiddiq/app/personal_website/pashto/log.txt', 'w') as log:
+        log.write(e)
+
+
+
+
 dict_trie = Trie()
 dict_trie.add_dict(words_dict)
 dict_trie.add_dict(words_dict,'normalized')
@@ -51,29 +58,35 @@ def my_form():
 
 @pashto_bp.route('/update_suggestions', methods=['POST'])
 def my_form_post():
-    query = request.get_json()
-    words = dict_trie.keys_with_prefix(query);
-    response = [dict_trie.get_data(i) for i in words][:100]
-    if len(response) < 10:
-        response += [dict_trie.get_data(i) for i in get_close_matches(query)]
+    try:
+        query = request.get_json()
+        words = dict_trie.keys_with_prefix(query);
+        response = [dict_trie.get_data(i) for i in words][:100]
+        if len(response) < 10:
+            response += [dict_trie.get_data(i) for i in get_close_matches(query)]
 
-    return make_response(jsonify(response), 200)
+        return make_response(jsonify(response), 200)
+    except Exception as e:
+        log_error(e)
 
 
 
 @pashto_bp.route('/meaning', methods=['POST'])
 def get_meaning():
-    word = request.get_json()
-    print(word)
-    word = word['word']
-    print(word)
     try:
-        response = dict_trie.get_data(word)
-    except Exception as e:
-        print("error")
-        response = ''
+        word = request.get_json()
+        print(word)
+        word = word['word']
+        print(word)
+        try:
+            response = dict_trie.get_data(word)
+        except Exception as e:
+            print("error")
+            response = ''
 
-    return make_response(jsonify(response), 200)
+        return make_response(jsonify(response), 200)
+    except Exception as e:
+        log_error(e)
 
 @pashto_bp.route('/enter_press', methods=['POST'])
 def handle_enter():
