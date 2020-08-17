@@ -40,9 +40,7 @@ def validate_is_fit(f):
         if args[0].is_build:
             return f(*args, **kwargs)
         else:
-            raise StringGrouperNotFitException(f'{f.__name__} was called before the "fit" function was called.'
-                                               f' Make sure to run fit the StringGrouper first using '
-                                               f'StringGrouper.fit()')
+            pass 
     return wrapper
 
 
