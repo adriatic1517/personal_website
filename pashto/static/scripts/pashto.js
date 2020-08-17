@@ -40,7 +40,7 @@ async function get_suggestions(query) {
 
  let data = {"query": query};
  if (data['query']){
-  const response = await fetch('pashto/update_suggestions', {
+  const response = await fetch('update_suggestions', {
     method: 'POST',headers: {
       'Content-Type': 'application/json'
     },
@@ -84,7 +84,7 @@ function add_suggestions_box(data) {
 //gets meaning and calls change_to_display_view
 async function get_meaning(word) {
   if (word['word']) {
-  await fetch('pashto/meaning',  {
+  await fetch('meaning',  {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
