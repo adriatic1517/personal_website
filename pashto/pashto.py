@@ -6,7 +6,7 @@ from personal_website.pashto.tries import Trie, Node
 import pandas as pd
 import numpy as np
 
-with open('pashto/data/Pashto_Raverty_full.json') as json_file:
+with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
 
 def log_error(e):
@@ -27,8 +27,8 @@ for i in words_dict:
         choices.append(words_dict[i]['pashto'])
         choices.append(words_dict[i]['phonetic'])
 
-#/home/e/em/emadsiddiq/app/personal_website/
-df = pd.read_json('pashto/data/Pashto_Raverty_full.json').transpose()
+
+df = pd.read_json('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json').transpose()
 
 def get_close_matches(user_input):
     search_terms = pd.Series([user_input])
