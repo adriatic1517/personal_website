@@ -39,7 +39,6 @@ async function get_suggestions(query) {
   //data format {'query': search query}
 
  let data = {"query": query};
- console.log(data);
  if (data['query']){
   const response = await fetch('update_suggestions', {
     method: 'POST',headers: {
@@ -62,10 +61,8 @@ function add_suggestions_box(data) {
     document.getElementById('suggestions_box').remove();
   }
   let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
-  console.log(data);
   for (i = 0; i < data.length; i++){
     if (data[i]['pashto']) {
-      console.log(typeof(data[i]));
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
@@ -85,7 +82,6 @@ function add_suggestions_box(data) {
 //gets meaning and calls change_to_display_view
 async function get_meaning(word) {
   if (word['word']) {
-    console.log(word);
   await fetch('meaning',  {
     method: 'POST',
     headers: {
@@ -122,7 +118,6 @@ function set_search_page() {
   add_to_container(back);
   input_area.addEventListener('input', function() {
     let entry = input_area.value.toLowerCase();
-    console.log(entry);
     get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {

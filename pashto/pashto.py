@@ -9,10 +9,7 @@ import numpy as np
 with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
 
-def log_error(e):
-    print("Error" + str(e))
-    with open('pashto/log.txt', 'a') as file:
-        file.write(str(e))
+
 
 
 
