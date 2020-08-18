@@ -39,6 +39,7 @@ async function get_suggestions(query) {
   //data format {'query': search query}
 
  let data = {"query": query};
+ console.log(data);
  if (data['query']){
   const response = await fetch('update_suggestions', {
     method: 'POST',headers: {
@@ -84,6 +85,7 @@ function add_suggestions_box(data) {
 //gets meaning and calls change_to_display_view
 async function get_meaning(word) {
   if (word['word']) {
+    console.log(word);
   await fetch('meaning',  {
     method: 'POST',
     headers: {

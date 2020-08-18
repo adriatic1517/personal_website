@@ -30,16 +30,6 @@ for i in words_dict:
 
 df = pd.read_json('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json').transpose()
 
-def get_close_matches(user_input):
-    search_terms = pd.Series([user_input])
-    
-    matches_pashto = match_strings(df['pashto'], search_terms, min_similarity = 0.3)
-    matches_pashto = matches_pashto.sort_values(by='similarity', ascending=False)
-    
-    matches_phonetic = match_strings(df['normalized'], search_terms, min_similarity = 0.3)
-    matches_phonetic = matches_phonetic.sort_values(by='similarity', ascending=False)
-
-    return matches_pashto['left_side'].to_list() + matches_phonetic['left_side'].to_list()
 
 
     
@@ -62,8 +52,8 @@ def my_form_post():
         query = request.get_json()
         words = dict_trie.keys_with_prefix(query);
         response = [dict_trie.get_data(i) for i in words][:100]
-        if len(response) < 10:
-            response += [dict_trie.get_data(i) for i in get_close_matches(query)]
+        #if len(response) < 10:
+            #response += [dict_trie.get_data(i) for i in get_close_matches(query)]
 
         return make_response(jsonify(response), 200)
     except Exception as e:
@@ -75,9 +65,7 @@ def my_form_post():
 def get_meaning():
     try:
         word = request.get_json()
-        print(word)
         word = word['word']
-        print(word)
         try:
             response = dict_trie.get_data(word)
         except Exception as e:
