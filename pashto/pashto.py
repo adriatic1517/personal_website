@@ -48,33 +48,27 @@ def my_form():
 
 @pashto_bp.route('/update_suggestions', methods=['POST'])
 def my_form_post():
-    try:
-        query = request.get_json()
-        words = dict_trie.keys_with_prefix(query);
-        response = [dict_trie.get_data(i) for i in words][:100]
+    query = request.get_json()
+    words = dict_trie.keys_with_prefix(query);
+    response = [dict_trie.get_data(i) for i in words][:100]
         #if len(response) < 10:
             #response += [dict_trie.get_data(i) for i in get_close_matches(query)]
 
-        return make_response(jsonify(response), 200)
-    except Exception as e:
-        log_error(e)
+    return make_response(jsonify(response), 200)
+    
 
 
 
 @pashto_bp.route('/meaning', methods=['POST'])
 def get_meaning():
+    word = request.get_json()
+    word = word['word']
     try:
-        word = request.get_json()
-        word = word['word']
-        try:
-            response = dict_trie.get_data(word)
-        except Exception as e:
-            print("error")
-            response = ''
-
-        return make_response(jsonify(response), 200)
+        response = dict_trie.get_data(word)
     except Exception as e:
-        log_error(e)
+        response = {}
+    return make_response(jsonify(response), 200)
+   
 
 @pashto_bp.route('/enter_press', methods=['POST'])
 def handle_enter():
