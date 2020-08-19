@@ -1,19 +1,17 @@
 <html>
 <head>
-<script src="{{url_for('pashto_bp.static', filename='scripts/pashto.js')}}" defer></script>
-<link rel= "stylesheet" href= "{{ url_for('pashto_bp.static',filename='style/definition.css') }}" id ="curr_css">
+<script src="{{url_for('static', filename='scripts/pashto.js')}}" defer></script>
+<link rel= "stylesheet" href= "{{ url_for('static',filename='style/definition.css') }}" id ="curr_css">
 </head>
 
 <body>
-
 <div class = "container" id = "container">
 		<div class = "About"><a href = ""> About</a></div>
-        <div class = "heading"> د پښتو ژبې قاموس </div>
+        <div class = "heading"> پښتو </div>
           <form method="POST" class="search_area" id = "search_area" onsubmit="return false;">
             <input list ="suggestions" type="search" id="input_area" name="input_area"
             aria-label="Search through site content" autoselect>
           </form>
 
-           <div class="suggestions_box" id ="suggestions_box"></div>
 </body>
 </html>

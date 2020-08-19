@@ -1,24 +1,40 @@
 @import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css); 
 body {
-	font-size: 16px; 
-	font-family: 'Noto Naskh Arabic', serif;
+font-size: 16px;
+font-family: 'Noto Naskh Arabic', serif;
+background-image: url(../images/border.svg);
+background-size: 100%;
+background-repeat: repeat;
+background-position-x: center;
+background-position-y: 6vw;
+
 }
 
 
+
 .container {
+
 	font-family: 'Noto Naskh Arabic', serif;
 	display:grid;
 	grid-template-columns:repeat(10,10vw);
 	grid-template-rows: repeat(10,10vh);
+
 }
 
+
+
 .heading {
-	direction:rtl;
-	grid-row:3/4;
-	grid-column:1/11;
-	text-align: center;
-	font-size:5.5vh;
-	color: #424242;
+direction: rtl;
+grid-row: 3/3;
+grid-column: 2/10;
+text-align: center;
+font-size: 8vh;
+color: white;
+background-color: rgb(255, 204, 102);
+border-radius: 5vw;
+font-weight: 700;
+margin-top:-40px;
+	
 }
 
 .search_area {
@@ -40,7 +56,13 @@ input,text_area, search{
 .About {
 	grid-column: 10/10;
 	grid-row:1/1;
-
+    
+    display:grid;
+	grid-template-rows:repeat(3, 1fr);
+	grid-template-columns :repeat(3, 1fr);
+}
+.About > a{
+	grid-row:1/1;
 }
 
 a{
