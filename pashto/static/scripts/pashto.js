@@ -21,8 +21,13 @@ function get_and_clone(element) {
 }
 
 function clear_container() {
-  document.getElementById('container').innerHTML = '';
+  let container = document.getElementById('container')
+  while (container.firstChild) {
+     container.removeChild(container.firstChild);
+   }
 }
+
+
 function add_to_container(element) {
   document.getElementById('container').appendChild(element);
 }
