@@ -2,21 +2,28 @@
 body {
 	font-size: 16px; 
 	font-family: 'Noto Naskh Arabic', serif;
+	background-image: url(../images/border.svg);
+  	background-size: 250%;
 }
 
 .container {
 	display: grid;
 	grid-template-columns: repeat(10, 10vw);
 	grid-template-rows: repeat(10, 10vh);
+
 }
 
 .holder {
 	direction:rtl;
-	grid-row: 3/3;
+	grid-row: 3/8;
 	grid-column:1/11;
 	display:grid;
 	grid-template-rows: 8vh auto;
 	grid-template-columns: repeat(10, 10vw);
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 5vw solid rgba(0, 0, 0, 0.15);
+	border-radius: 10vw;
+	
 }
 
 .word {
@@ -42,16 +49,20 @@ body {
 	grid-column:2/10;
 	font-size: 3vh;
 	color: #424242
+	margin-top: 3vh;
 }
 
 .back {
 	grid-row:1/1;
 	grid-column:1/1;
-	font-size: 5vh;
+	font-size: 7vh;
+	text-shadow: 8px 8px 6px black;
 	color:  #4285f4;
 	text-align: left;
 	margin: 1vw;
-}
+	font-weight: 999;
+	color: white;
 
+}
 
 
