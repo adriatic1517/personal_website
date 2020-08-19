@@ -44,7 +44,7 @@ body {
 
 
 .definition {
-	margin-top:20px;
+	margin-top: 10%;
 	grid-row: 4/8;
 	grid-column:2/10;
 	font-size: 3vh;
