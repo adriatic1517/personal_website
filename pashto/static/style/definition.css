@@ -15,7 +15,7 @@ body {
 
 .holder {
 	direction:rtl;
-	grid-row: 3/8;
+	grid-row: 3/9;
 	grid-column:1/11;
 	display:grid;
 	grid-template-rows: 8vh auto;
@@ -45,10 +45,11 @@ body {
 
 .definition {
 	margin-top:20px;
-	grid-row: 4/10;
+	grid-row: 4/8;
 	grid-column:2/10;
 	font-size: 3vh;
-	margin-top: 3vh;
+	margin-top: 5vh;
+	overflow: scroll;
 }
 
 .back {
