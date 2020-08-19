@@ -3,7 +3,7 @@
 //----------------------------------------------------------------
 
 function switch_css_to(name) {
-  document.getElementById('curr_css').setAttribute("href", "pashto/static/style/" + name);
+  document.getElementById('curr_css').setAttribute("href", "static/style/" + name);
 }
 
 function createDiv(class_ ='', id ='', value='', innerHTML=''){
@@ -39,12 +39,11 @@ const search_area = get_and_clone('search_area');
 
 
 
-async function get_suggestions(query) {
+function get_suggestions(query) {
   //data format {'query': search query}
-
  let data = {"query": query};
  if (data['query']){
-  const response = await fetch('update_suggestions', {
+  const response =  fetch('update_suggestions', {
     method: 'POST',headers: {
       'Content-Type': 'application/json'
     },
@@ -120,9 +119,9 @@ function set_search_page() {
   });
 
   add_to_container(back);
-   input_area.addEventListener('input', async function() {
+   input_area.addEventListener('input',  function() {
     let entry = input_area.value.toLowerCase();
-    await get_suggestions(entry);
+     get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {
     input_area.value = '';
