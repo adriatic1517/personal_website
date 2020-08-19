@@ -74,6 +74,7 @@ function add_suggestions_box(data) {
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
 
       suggestion.addEventListener('click', function() {
+      clear_container();
        get_meaning({"word":suggestion.getAttribute('value')});
 
       })
