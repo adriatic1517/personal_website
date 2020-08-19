@@ -20,10 +20,10 @@ function get_and_clone(element) {
     return node;
 }
 
-function clear_container() {
-  let container = document.getElementById('container')
-  while (container.firstChild) {
-     container.removeChild(container.firstChild);
+function clear(element) {
+  let node = document.getElementById(element)
+  while (node.firstChild) {
+     node.removeChild(node.firstChild);
    }
 }
 
@@ -96,7 +96,7 @@ function add_suggestions_box(data) {
 
 
 function set_home_page() {
-  clear_container();
+  clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
   let input_area = document.getElementById("input_area");
@@ -107,7 +107,7 @@ function set_home_page() {
 
 function set_search_page() {
   let search = search_area;
-  clear_container();
+  clear('container');
   switch_css_to('search.css');
 
   add_to_container(search);
@@ -121,6 +121,7 @@ function set_search_page() {
   add_to_container(back);
    input_area.addEventListener('input',  function() {
     let entry = input_area.value.toLowerCase();
+      clear('suggestions_box');
      get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {
@@ -130,7 +131,7 @@ function set_search_page() {
 }
 
 function set_definition_page(meaning) {
-  clear_container();
+  clear('container');
   switch_css_to('definition.css');
    let back = create_back_button();
   back.addEventListener('click', function() {
