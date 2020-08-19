@@ -3,7 +3,7 @@
 //----------------------------------------------------------------
 
 function switch_css_to(name) {
-  document.getElementById('curr_css').setAttribute("href", "static/style/" + name);
+  document.getElementById('curr_css').setAttribute("href", "pashto/static/style/" + name);
 }
 
 function createDiv(class_ ='', id ='', value='', innerHTML=''){
