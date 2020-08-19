@@ -73,7 +73,6 @@ function add_suggestions_box(data) {
 
       suggestion.addEventListener('click', function() {
        get_meaning({"word":suggestion.getAttribute('value')});
-
       })
       suggestions_box.append(suggestion);
     }
@@ -83,9 +82,9 @@ function add_suggestions_box(data) {
 
 
 //gets meaning and calls change_to_display_view
-async function get_meaning(word) {
+ function get_meaning(word) {
   if (word['word']) {
-  await fetch('meaning',  {
+   fetch('meaning',  {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -97,6 +96,7 @@ async function get_meaning(word) {
 
 
 function set_home_page() {
+  clear_container();
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
   let input_area = document.getElementById("input_area");
