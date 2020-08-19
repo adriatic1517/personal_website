@@ -3,7 +3,7 @@
 //----------------------------------------------------------------
 
 function switch_css_to(name) {
-  document.getElementById('curr_css').setAttribute("href", "pashto/static/style/" + name);
+  document.getElementById('curr_css').setAttribute("href", "static/style/" + name);
 }
 
 function createDiv(class_ ='', id ='', value='', innerHTML=''){
@@ -60,10 +60,9 @@ else {
 
 
 function add_suggestions_box(data) {
-  if (document.getElementById('suggestions_box')) {
-    document.getElementById('suggestions_box').remove();
-  }
-  let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
+  clear('suggestions_box');
+
+  let suggestions_box = document.getElementById('suggestions_box');
   for (i = 0; i < data.length; i++){
     if (data[i]['pashto']) {
       let curr = data[i];
@@ -109,19 +108,21 @@ function set_search_page() {
   let search = search_area;
   clear('container');
   switch_css_to('search.css');
-
   add_to_container(search);
-
   let back = create_back_button();
   back.addEventListener('click', function() {
-    document.body.innerHTML = '';
+    clear('container');
     set_home_page();
   });
-
+  let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
   add_to_container(back);
+  add_to_container(suggestions_box);
+  
    input_area.addEventListener('input',  function() {
     let entry = input_area.value.toLowerCase();
+    if (document.getElementById('suggestions_box')) {
       clear('suggestions_box');
+    }
      get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {
