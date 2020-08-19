@@ -3,12 +3,14 @@ from flask import Flask, Blueprint, request, render_template, jsonify, make_resp
 
 import json
 from personal_website.pashto.tries import Trie, Node
+from personal_website.pashto.tfidf_search import search 
+
 import pandas as pd
 import numpy as np
 
 with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
-
+pashto_df = pd.DataFrame(words_dict).transpose()
 
 
 
@@ -48,8 +50,9 @@ def my_form_post():
     query = request.get_json()
     words = dict_trie.keys_with_prefix(query);
     response = [dict_trie.get_data(i) for i in words][:100]
-        #if len(response) < 10:
-            #response += [dict_trie.get_data(i) for i in get_close_matches(query)]
+    if len(response) < 10:
+        response += [dict_trie.get_data(i) for i in search(pashto_df, 'normalized', query)]
+
 
     return make_response(jsonify(response), 200)
     
