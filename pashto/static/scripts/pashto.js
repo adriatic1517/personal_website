@@ -116,7 +116,7 @@ function set_search_page() {
 
   let back = create_back_button();
   back.addEventListener('click', function() {
-    document.body.innerHTML = '';
+    clear_container();
     set_home_page();
   });
 
@@ -134,10 +134,14 @@ function set_search_page() {
 function set_definition_page(meaning) {
   clear_container();
   switch_css_to('definition.css');
-   let back = create_back_button();
+  let back = create_back_button();
+
   back.addEventListener('click', function() {
+    clear_container();
     set_search_page();
   });
+
+
   add_to_container(back);
 
   let holder = createDiv('holder', 'holder', 'holder', '');
