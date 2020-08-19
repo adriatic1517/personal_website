@@ -3,7 +3,7 @@
 //----------------------------------------------------------------
 
 function switch_css_to(name) {
-  document.getElementById('curr_css').setAttribute("href", "pashto/static/style/" + name);
+  document.getElementById('curr_css').setAttribute("href", "static/style/" + name);
 }
 
 function createDiv(class_ ='', id ='', value='', innerHTML=''){
@@ -26,7 +26,6 @@ function clear_container() {
      container.removeChild(container.firstChild);
    }
 }
-
 
 function add_to_container(element) {
   document.getElementById('container').appendChild(element);
@@ -74,7 +73,6 @@ function add_suggestions_box(data) {
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
 
       suggestion.addEventListener('click', function() {
-      clear_container();
        get_meaning({"word":suggestion.getAttribute('value')});
 
       })
@@ -117,14 +115,14 @@ function set_search_page() {
 
   let back = create_back_button();
   back.addEventListener('click', function() {
-    clear_container();
+    document.body.innerHTML = '';
     set_home_page();
   });
 
   add_to_container(back);
-  input_area.addEventListener('input', function() {
+   input_area.addEventListener('input', async function() {
     let entry = input_area.value.toLowerCase();
-    get_suggestions(entry);
+    await get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {
     input_area.value = '';
@@ -135,14 +133,10 @@ function set_search_page() {
 function set_definition_page(meaning) {
   clear_container();
   switch_css_to('definition.css');
-  let back = create_back_button();
-
+   let back = create_back_button();
   back.addEventListener('click', function() {
-    clear_container();
     set_search_page();
   });
-
-
   add_to_container(back);
 
   let holder = createDiv('holder', 'holder', 'holder', '');
