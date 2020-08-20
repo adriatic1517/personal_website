@@ -51,7 +51,8 @@ def my_form_post():
     words = dict_trie.keys_with_prefix(query);
     response = [dict_trie.get_data(i) for i in words][:100]
     if len(response) < 10:
-        response += [dict_trie.get_data(i) for i in search(pashto_df, 'normalized', query)]
+        response += [dict_trie.get_data(i) for i in search(pashto_df, 'normalized', query, 0.5, 10)]
+        response += [dict_trie.get_data(i) for i in search(pashto_df, 'pashto', query, 0.5, 10)]
 
 
     return make_response(jsonify(response), 200)
