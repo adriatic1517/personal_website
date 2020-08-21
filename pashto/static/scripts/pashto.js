@@ -39,6 +39,91 @@ const search_area = get_and_clone('search_area');
 
 
 
+
+
+//gets meaning and calls change_to_display_view
+ function get_meaning(word) {
+  if (word['word']) {
+   fetch('meaning',  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(word)
+  }).then(meaning => {meaning.json().then(set_definition_page)})}}
+
+
+
+
+function set_home_page() {
+  /*First View*/
+  clear('container');
+  switch_css_to('main.css');
+  document.body.innerHTML = main_container;
+  let input_area = document.getElementById("input_area");
+  input_area.addEventListener("click", set_search_page);
+}
+
+function set_search_page() {
+let viewPortWidth = window.innerWidth;
+if (viewPortWidth > 700) {
+  set_desktop_search_page();
+}
+else {
+  set_mobile_search_page();
+}
+
+}
+
+function set_desktop_search_page(){
+/*Second View for screens greather than 700px"""*/
+  let input_area = document.getElementById("input_area");
+  if (document.getElementById('suggestions_box')) {
+      clear('suggestions_box');
+    }
+  add_input_area_listeners();
+  input_area.focus();
+
+}
+
+function set_mobile_search_page() {
+  /*Second View for screens less than 700px*/
+  let search = search_area;
+  let back = create_back_button();
+  let input_area = document.getElementById("input_area");
+
+
+  clear('container');
+  switch_css_to('search.css');
+  add_to_container(search);
+
+  back.addEventListener('click', function() {
+    clear('container');
+    set_home_page();
+  });
+
+   if (document.getElementById('suggestions_box')) {
+      clear('suggestions_box');
+    }
+
+  add_to_container(back);
+  add_to_container(suggestions_box);
+  add_input_area_listeners();
+  input_area.focus();
+}
+
+function add_input_area_listeners(){
+  let input_area = document.getElementById("input_area");
+
+   input_area.addEventListener('input',  function() {
+    let entry = input_area.value.toLowerCase();
+     get_suggestions(entry);
+  })
+  input_area.addEventListener('click', function() {
+    input_area.value = '';
+  })
+}
+
 function get_suggestions(query) {
   //data format {'query': search query}
  let data = {"query": query};
@@ -58,11 +143,14 @@ else {
 }
 }}
 
-
 function add_suggestions_box(data) {
-  clear('suggestions_box');
-
-  let suggestions_box = document.getElementById('suggestions_box');
+  
+  let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
+  if (document.getElementById('suggestions_box')) {
+    clear('suggestions_box');
+    suggestions_box = document.getElementById('suggestions_box');
+  }
+  
   for (i = 0; i < data.length; i++){
     if (data[i]['pashto']) {
       let curr = data[i];
@@ -79,57 +167,6 @@ function add_suggestions_box(data) {
   add_to_container(suggestions_box);
 }
 
-
-//gets meaning and calls change_to_display_view
- function get_meaning(word) {
-  if (word['word']) {
-   fetch('meaning',  {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(word)
-  }).then(meaning => {meaning.json().then(set_definition_page)})}}
-
-
-
-
-function set_home_page() {
-  clear('container');
-  switch_css_to('main.css');
-  document.body.innerHTML = main_container;
-  let input_area = document.getElementById("input_area");
-  input_area.addEventListener("click", set_search_page);
-}
-
-
-
-function set_search_page() {
-  let search = search_area;
-  clear('container');
-  switch_css_to('search.css');
-  add_to_container(search);
-  let back = create_back_button();
-  back.addEventListener('click', function() {
-    clear('container');
-    set_home_page();
-  });
-  let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
-  add_to_container(back);
-  add_to_container(suggestions_box);
-  
-   input_area.addEventListener('input',  function() {
-    let entry = input_area.value.toLowerCase();
-    if (document.getElementById('suggestions_box')) {
-      clear('suggestions_box');
-    }
-     get_suggestions(entry);
-  })
-  input_area.addEventListener('click', function() {
-    input_area.value = '';
-  })
-  input_area.focus();
-}
 
 function set_definition_page(meaning) {
   clear('container');
