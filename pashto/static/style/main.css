@@ -68,15 +68,13 @@ a{
 	font-size: 1.5vh;
 }
 
-@media (min-width: 700px) {
-	.search_area {
-		grid-column:3/9;
-}
 input,text_area, search{
 	width: 60vw;
 	height: 5vh;
 }
-@media (min-width: 700px) {
+
+
+@media (min-device-width: 700px) {
 
 .search_area {
 		grid-column:4/8;
@@ -103,6 +101,8 @@ input,text_area, search{
 		border-width: 0px 0px 1.5px 0px;
 		border-style:solid;
 		border-color:rgba(0, 0, 0, 0.2);
+
+		
 		
 	}
 	
