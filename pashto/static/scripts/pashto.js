@@ -107,7 +107,7 @@ function set_mobile_search_page() {
     }
 
   add_to_container(back);
-  add_to_container(suggestions_box);
+
   add_input_area_listeners();
   input_area.focus();
 }
