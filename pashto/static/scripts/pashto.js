@@ -65,8 +65,8 @@ function set_home_page() {
 }
 
 function set_search_page() {
-let viewPortWidth = window.innerWidth;
-if (viewPortWidth > 700) {
+let screenWidth = window.screen.width;
+if (screenWidth > 700) {
   set_desktop_search_page();
 }
 else {
