@@ -44,6 +44,7 @@ body {
 
 
 .definition {
+	grid-row: 3/6;
 	margin-top: 10%;
 	grid-row: 4/8;
 	grid-column:2/10;

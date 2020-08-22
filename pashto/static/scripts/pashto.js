@@ -77,6 +77,8 @@ else {
 
 function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
+  add_to_container(search_area);
+
   let input_area = document.getElementById("input_area");
   if (document.getElementById('suggestions_box')) {
       clear('suggestions_box');
@@ -88,7 +90,8 @@ function set_desktop_search_page(){
 
 function set_mobile_search_page() {
   /*Second View for screens less than 700px*/
-  let search = search_area;
+  add_to_container(search_area);
+
   let back = create_back_button();
   let input_area = document.getElementById("input_area");
 
@@ -178,7 +181,6 @@ function set_definition_page(meaning) {
   add_to_container(back);
 
   let holder = createDiv('holder', 'holder', 'holder', '');
-
   let word = createDiv('word', 'word', 'word', meaning['pashto']);
   let phonetic = createDiv('phonetic', 'phonetic', 'phonetic', meaning['phonetic']);
   let definition = createDiv('definition', 'definition', 'definition', meaning['meaning']);
@@ -186,10 +188,11 @@ function set_definition_page(meaning) {
 
   holder.appendChild(word);
   holder.appendChild(phonetic);
+  holder.appendChild(definition);
 
   add_to_container(holder);
  
-  add_to_container(definition);
+  
 }
 
 
