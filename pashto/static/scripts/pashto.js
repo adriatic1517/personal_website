@@ -78,7 +78,7 @@ else {
 function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
   set_home_page();
-  add_search_area();
+  add_search_area_clone();
   let input_area = document.getElementById("input_area");
 
 
@@ -92,31 +92,26 @@ function set_desktop_search_page(){
 
 function set_mobile_search_page() {
   /*Second View for screens less than 700px*/
-  add_search_area();
+  clear('container');
+  
 
   let back = create_back_button();
-  let input_area = document.getElementById("input_area");
 
-
-  clear('container');
   switch_css_to('search.css');
-
-  /*if (document.getElementById('suggestions_box')) {
-      clear('suggestions_box');
-    }*/
   
 
   back.addEventListener('click', function() {
     clear('container');
     set_home_page();
   });
-  add_to_container(back);
 
+  add_search_area_clone();
+  add_to_container(back);
   add_input_area_listeners();
-  input_area.focus();
+  document.getElementById("input_area");.focus();
 }
 
-function add_search_area() {
+function add_search_area_clone() {
   let search_area = document.getElementById('search_area');
   if (search_area==null) {
     document.getElementById('container').appendChild(search_area_clone);
