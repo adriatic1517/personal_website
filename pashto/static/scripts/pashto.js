@@ -108,7 +108,7 @@ function set_mobile_search_page() {
   add_search_area_clone();
   add_to_container(back);
   add_input_area_listeners();
-  document.getElementById("input_area");.focus();
+  document.getElementById("input_area").focus();
 }
 
 function add_search_area_clone() {
