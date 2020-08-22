@@ -14,8 +14,10 @@ font-family: 'Noto Naskh Arabic', serif;
 	grid-template-columns:repeat(10,10vw);
 	grid-template-rows: repeat(10,10vh);
 	background-image: url(../images/bukhara.jpg);
-
   	background-size: 100%;
+	background-repeat:no-repeat;
+	background-position-x:center;
+	background-size:auto;
 
 }
 
