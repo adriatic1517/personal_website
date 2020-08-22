@@ -2,18 +2,19 @@
 body {
 	font-size: 16px; 
 	font-family: 'Noto Naskh Arabic', serif;
-	background-image: url(../images/bukhara.jpg);
-  background-size: 100%;
-	background-repeat:no-repeat;
-	background-position-x:center;
-	background-position-y:5vh;
-	background-size:auto;
+
 }
 
 .container {
 	display: grid;
 	grid-template-columns: repeat(10, 10vw);
 	grid-template-rows: repeat(10, 10vh);
+	background-image: url(../images/bukhara.jpg);
+  background-size: 100%;
+	background-repeat:no-repeat;
+	background-position-x:center;
+	background-position-y:5vh;
+	background-size:auto;
 
 }
 
