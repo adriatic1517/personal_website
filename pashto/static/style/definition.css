@@ -19,7 +19,7 @@ body {
 	grid-column:2/10;
 	display:grid;
 	grid-template-rows: 8vh 4vh auto;
-	grid-template-columns: repeat(10, 10vw);
+	grid-template-columns: repeat(10, 1fr);
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 0.5vw solid rgba(0, 0, 0, 0.15);
 	border-radius: 10vw;
@@ -45,7 +45,6 @@ body {
 
 .definition {
 	grid-row: 3;
-	grid-row: 4/8;
 	grid-column:2/10;
 	font-size: 3vh;
 	overflow: scroll;
