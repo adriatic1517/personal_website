@@ -77,7 +77,7 @@ else {
 
 function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
-  search_are_check();
+  search_area_check();
   add_to_container(search_area);
 
   let input_area = document.getElementById("input_area");
@@ -91,7 +91,7 @@ function set_desktop_search_page(){
 
 function set_mobile_search_page() {
   /*Second View for screens less than 700px*/
-  search_are_check();
+  search_area_check();
 
   let back = create_back_button();
   let input_area = document.getElementById("input_area");
