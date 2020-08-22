@@ -65,4 +65,10 @@ body {
 
 }
 
+@media (min-device-width: 700px) {
+
+.container {
+	background-size:auto;
+}}
+
 
