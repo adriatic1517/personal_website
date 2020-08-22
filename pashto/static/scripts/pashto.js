@@ -41,20 +41,12 @@ const search_area_clone = get_and_clone('search_area');
 
 
 
-//gets meaning and calls change_to_display_view
- function get_meaning(word) {
-  if (word['word']) {
-   fetch('meaning',  {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(word)
-  }).then(meaning => {meaning.json().then(set_definition_page)})}}
 
+/*-----------------------------------------------------------------------
 
+Home Page 
 
-
+------------------------------------------------------------------------*/
 function set_home_page() {
   /*First View*/
   clear('container');
@@ -63,6 +55,14 @@ function set_home_page() {
   let input_area = document.getElementById("input_area");
   input_area.addEventListener("click", set_search_page);
 }
+
+
+/*-----------------------------------------------------------------------
+
+Search Page 
+
+------------------------------------------------------------------------*/
+
 
 function set_search_page() {
 let screenWidth = window.screen.width;
@@ -77,10 +77,12 @@ else {
 
 function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
+  set_home_page();
   search_area_check();
   add_to_container(search_area);
-
   let input_area = document.getElementById("input_area");
+
+
   if (document.getElementById('suggestions_box')) {
       clear('suggestions_box');
     }
@@ -116,6 +118,13 @@ function set_mobile_search_page() {
   input_area.focus();
 }
 
+function search_area_check() {
+  let search_area = document.getElementById('search_area');
+  if (search_area==null) {
+    document.getElementById('container').appendChild(search_area_clone);
+  }
+}
+
 function add_input_area_listeners(){
   let input_area = document.getElementById("input_area");
 
@@ -128,12 +137,7 @@ function add_input_area_listeners(){
   })
 }
 
-function search_area_check() {
-  let search_area = document.getElementById('search_area');
-  if (search_area==null) {
-    document.getElementById('container').appendChild(search_area_clone);
-  }
-}
+
 
 function get_suggestions(query) {
   //data format {'query': search query}
@@ -155,7 +159,6 @@ else {
 }}
 
 function add_suggestions_box(data) {
-  
   let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
   if (document.getElementById('suggestions_box')) {
     clear('suggestions_box');
@@ -179,6 +182,24 @@ function add_suggestions_box(data) {
 }
 
 
+/*-----------------------------------------------------------------------
+
+Home Page 
+
+------------------------------------------------------------------------*/
+
+//gets meaning and sets definition view
+ function get_meaning(word) {
+  if (word['word']) {
+   fetch('meaning',  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(word)
+  }).then(meaning => {meaning.json().then(set_definition_page)})}}
+
+
 function set_definition_page(meaning) {
   clear('container');
   switch_css_to('definition.css');
@@ -187,7 +208,6 @@ function set_definition_page(meaning) {
     set_search_page();
   });
   add_to_container(back);
-
   let holder = createDiv('holder', 'holder', 'holder', '');
   let word = createDiv('word', 'word', 'word', meaning['pashto']);
   let phonetic = createDiv('phonetic', 'phonetic', 'phonetic', meaning['phonetic']);
@@ -197,10 +217,7 @@ function set_definition_page(meaning) {
   holder.appendChild(word);
   holder.appendChild(phonetic);
   holder.appendChild(definition);
-
   add_to_container(holder);
- 
-  
 }
 
 
@@ -211,7 +228,11 @@ function create_back_button(){
 }
 
 
+/*-----------------------------------------------------------------------
 
+Start  
+
+------------------------------------------------------------------------*/
 
 set_home_page();
 
