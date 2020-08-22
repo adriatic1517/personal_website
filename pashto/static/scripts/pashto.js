@@ -35,7 +35,7 @@ function add_to_container(element) {
 
 
 const main_container = document.body.innerHTML;
-const search_area = get_and_clone('search_area');
+const search_area_clone = get_and_clone('search_area');
 
 
 
@@ -77,6 +77,7 @@ else {
 
 function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
+  search_are_check();
   add_to_container(search_area);
 
   let input_area = document.getElementById("input_area");
@@ -90,7 +91,7 @@ function set_desktop_search_page(){
 
 function set_mobile_search_page() {
   /*Second View for screens less than 700px*/
-  add_to_container(search_area);
+  search_are_check();
 
   let back = create_back_button();
   let input_area = document.getElementById("input_area");
@@ -125,6 +126,13 @@ function add_input_area_listeners(){
   input_area.addEventListener('click', function() {
     input_area.value = '';
   })
+}
+
+function search_area_check() {
+  let search_area = document.getElementById('search_area');
+  if (search_area==null) {
+    document.getElementById('container').appendChild(search_area_clone);
+  }
 }
 
 function get_suggestions(query) {
