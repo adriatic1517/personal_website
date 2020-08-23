@@ -169,8 +169,7 @@ function add_suggestions_box(data) {
   }
 
   for (i in suggestions_box.children) {
-    let curr = suggestions_box.children[i];
-      curr.addEventListener('click', function() {
+      suggestions_box.children[i].addEventListener('click', function() {
        get_meaning({"word":i.getAttribute('value')});
        
       })
