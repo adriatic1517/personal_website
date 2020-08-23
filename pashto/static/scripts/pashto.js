@@ -62,7 +62,7 @@ Search Page
 
 ------------------------------------------------------------------------*/
 
-set_about_page() {
+function set_about_page() {
   clear('container');
   switch_css_to('about.css');
 
