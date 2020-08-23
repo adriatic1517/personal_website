@@ -165,14 +165,14 @@ function add_suggestions_box(data) {
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
       suggestion.addEventListener('click', function() {
-        if loop_completed)
+       data = null;
        get_meaning({"word":i.getAttribute('value')});
        
       })
   }
       suggestions_box.append(suggestion);
     }
-  }
+  
 
   add_to_container(suggestions_box);
 }
