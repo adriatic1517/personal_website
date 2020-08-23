@@ -216,7 +216,7 @@ function set_definition_page(meaning) {
 
 
 function create_back_button(){
-  let back = createDiv('back', 'back', '', "<img src='pashto/static/images/back.svg' /img>");
+  let back = createDiv('back', 'back', '', "<img src='pashto/static/images/back.svg' />");
   return back;
 }
 
