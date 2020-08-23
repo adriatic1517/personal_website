@@ -164,16 +164,16 @@ function add_suggestions_box(data) {
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
-      suggestions_box.append(suggestion);
-    }
-  }
-
-  for (i in suggestions_box.children) {
-      suggestions_box.children[i].addEventListener('click', function() {
+      suggestion.addEventListener('click', function() {
+        if loop_completed)
        get_meaning({"word":i.getAttribute('value')});
        
       })
   }
+      suggestions_box.append(suggestion);
+    }
+  }
+
   add_to_container(suggestions_box);
 }
 
@@ -229,6 +229,7 @@ function create_back_button(){
 Start  
 
 ------------------------------------------------------------------------*/
+
 
 set_home_page();
 
