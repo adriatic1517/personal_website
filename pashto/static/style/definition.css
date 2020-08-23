@@ -55,17 +55,17 @@ body {
 }
 
 .back {
-	grid-row:1/1;
-	grid-column:1/1;
-	font-size: 7vh;
-	text-shadow: 8px 8px 6px black;
-	color:  #4285f4;
-	text-align: left;
-	margin: 1vw;
-	font-weight: 999;
-	color: white;
-
+	grid-row: 1/1;
+	grid-column: 1/1;
+	width: 5vw;
+	height: 5vw;
 }
+
+.back > img {
+	width: 100%;
+	height: 100%;
+}
+
 
 @media (min-device-width: 700px) {
 
