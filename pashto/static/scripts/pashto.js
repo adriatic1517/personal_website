@@ -75,10 +75,10 @@ function set_about_page() {
 
   let holder = createDiv('holder', 'holder', 'holder', '');
   let heading = createDiv('About', 'About', 'About', 'About');
-  let body = "I still need to get round to writing this..."
+  let content = createDiv('content', 'content', 'content', 'I will write this eventually.');
 
   holder.append(heading);
-  holder.append(body);
+  holder.append(content);
 
   add_to_container(holder);
 }
