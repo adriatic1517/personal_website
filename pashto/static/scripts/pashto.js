@@ -167,11 +167,10 @@ function add_suggestions_box(data) {
       suggestion.addEventListener('click', function() {
        data = null;
        get_meaning({"word":i.getAttribute('value')});
-       
       })
-  }
       suggestions_box.append(suggestion);
     }
+  }
   
 
   add_to_container(suggestions_box);
