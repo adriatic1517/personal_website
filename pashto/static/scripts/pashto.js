@@ -52,8 +52,35 @@ function set_home_page() {
   clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
-  let input_area = document.getElementById("input_area");
-  input_area.addEventListener("click", set_search_page);
+  document.getElementById("input_area").addEventListener("click", set_search_page);
+  document.getElementById("About").addEventListener("click", set_about_page);
+}
+
+/*-----------------------------------------------------------------------
+
+Search Page 
+
+------------------------------------------------------------------------*/
+
+set_about_page() {
+  clear('container');
+  switch_css_to('about.css');
+
+  let back = create_back_button();
+  back.addEventListener('click', function() {
+    clear('container');
+    set_home_page();
+  });
+  add_to_container(back);
+
+  let holder = createDiv('holder', 'holder', 'holder', '');
+  let heading = createDiv('About', 'About', 'About', 'About');
+  let body = "I still need to get round to writing this..."
+
+  holder.append(heading);
+  holder.append(body);
+
+  add_to_container(holder);
 }
 
 
@@ -79,34 +106,31 @@ function set_desktop_search_page(){
 /*Second View for screens greather than 700px"""*/
   set_home_page();
   add_search_area_clone();
-  let input_area = document.getElementById("input_area");
-
 
   if (document.getElementById('suggestions_box')) {
       clear('suggestions_box');
     }
   add_input_area_listeners();
-  input_area.focus();
+  document.getElementById("input_area").focus();
 
 }
 
 function set_mobile_search_page() {
   /*Second View for screens less than 700px*/
   clear('container');
-  
-
-  let back = create_back_button();
-
   switch_css_to('search.css');
-  
 
+  /*Add back button */
+  let back = create_back_button();
   back.addEventListener('click', function() {
     clear('container');
     set_home_page();
   });
+  add_to_container(back);
+
 
   add_search_area_clone();
-  add_to_container(back);
+  
   add_input_area_listeners();
   document.getElementById("input_area").focus();
 }
@@ -179,7 +203,7 @@ function add_suggestions_box(data) {
 
 /*-----------------------------------------------------------------------
 
-Home Page 
+Definition Page 
 
 ------------------------------------------------------------------------*/
 
@@ -219,6 +243,8 @@ function set_definition_page(meaning) {
 
 function create_back_button(){
   let back = createDiv('back', 'back', '', "<img src='pashto/static/images/back.svg' />");
+  
+
   return back;
 }
 
