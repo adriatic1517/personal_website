@@ -18,6 +18,7 @@ font-family: 'Noto Naskh Arabic', serif;
 	background-repeat:no-repeat;
 	background-position-x:center;
 	background-position-y:5vh;
+	touch-action: manipulation;
 
 }
 

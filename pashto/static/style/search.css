@@ -8,6 +8,7 @@ body{
 	background-repeat:no-repeat;
 	background-position-x:5vw 5vw;
 	background-position-y:5vh;
+	touch-action: manipulation;
 }
 
 .container {
