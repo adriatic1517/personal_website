@@ -61,14 +61,13 @@ input,text_area, search{
     display:grid;
 	grid-template-rows:repeat(3, 1fr);
 	grid-template-columns :repeat(3, 1fr);
-	background-color: rgba(0, 0, 0, aliceblue);
+
 }
 .About > a{
 	grid-row:1/1;
 	border: 2px solid black;
 	border-radius: 2vw; 
-	margin-right:;
-	padding: 0px 15px 0px 0px;
+	padding: 0 1vw 0 1vw;
 	color: #BE1C6A;
 	font-size: 1.75vh;
 	text-decoration: none;
