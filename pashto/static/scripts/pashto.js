@@ -151,7 +151,7 @@ function add_input_area_listeners(){
 
    input_area.addEventListener('input',  function() {
     let entry = input_area.value.toLowerCase();
-     get_suggestions(entry);
+     await get_suggestions(entry);
   })
   input_area.addEventListener('click', function() {
 
@@ -163,6 +163,7 @@ function add_input_area_listeners(){
 
 async function get_suggestions(query) {
   //data format {'query': search query}
+ clear('suggestions_box');
  let data = {"query": query};
  if (data['query']){
   const response = fetch('update_suggestions', {
@@ -174,29 +175,18 @@ async function get_suggestions(query) {
   raw_data_to.json()
   .then(add_suggestions_box);
 })}
-else {
-  if ((document.getElementById('suggestions_box'))) {
-  document.getElementById('suggestions_box').remove();
 }
-}}
 
 function add_suggestions_box(data) {
-  let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
-  if (document.getElementById('suggestions_box')) {
-    clear('suggestions_box');
-    suggestions_box = document.getElementById('suggestions_box');
-  }
   
   for (i = 0; i < data.length; i++){
     if (data[i]['pashto']) {
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
-
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
-      suggestions_box.append(suggestion);
+      document.getElementById('suggestions_box').append(suggestion);
     } 
   }
-  add_to_container(suggestions_box);
 
   let suggestions_list = document.getElementById('suggestions_box').childNodes;
   suggestions_list.forEach(function(element) {
