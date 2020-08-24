@@ -64,7 +64,7 @@ input,text_area, search{
 	grid-template-columns :repeat(3, 1fr);
 
 }
-.About > a{
+.About > .content{
 	grid-row:1/1;
 	border: 2px solid black;
 	border-radius: 2vw; 
