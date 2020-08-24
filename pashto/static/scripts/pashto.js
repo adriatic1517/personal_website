@@ -59,12 +59,10 @@ function set_home_page() {
   clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
-  document.getElementById("input_area").addEventListener("click", function(e) {
-    e.stopPropagation();
+  document.getElementById("input_area").addEventListener("click", function() {
     set_search_page(e);
   });
-  document.getElementById("About").addEventListener("click", function(e) {
-    e.stopPropagation();
+  document.getElementById("About").addEventListener("click", function() {
     set_about_page(e);
   });
 }
@@ -75,22 +73,20 @@ Search Page
 
 ------------------------------------------------------------------------*/
 
-function set_about_page(e) {
-  e.stopPropagation();
+function set_about_page() {
   clear('container');
   switch_css_to('about.css');
 
   let back = create_back_button();
-  back.addEventListener('click', function(e) {
-    e.stopPropagation();
+  back.addEventListener('click', function() {
     clear('container');
-    set_home_page(e);
+    set_home_page();
   });
 
   add_to_container(back);
 
   let holder = createDiv('holder', 'holder', 'holder', '');
-  let heading = createDiv('About', 'About', 'About', 'About');
+  let heading = createDiv('heading ', 'heading', 'heading', 'About');
   let content = createDiv('content', 'content', 'content', 'I will write this eventually.');
 
   holder.append(heading);
@@ -107,8 +103,7 @@ Search Page
 ------------------------------------------------------------------------*/
 
 
-function set_search_page(e) {
-e.stopPropagation();
+function set_search_page() {
 let screenWidth = window.screen.width;
 if (screenWidth > 700) {
   set_desktop_search_page();
@@ -139,8 +134,7 @@ function set_mobile_search_page() {
 
   /*Add back button */
   let back = create_back_button();
-  back.addEventListener('click', function(e) {
-    e.stopPropagation();
+  back.addEventListener('click', function() {
     clear('container');
     set_home_page();
   });
@@ -163,13 +157,12 @@ function add_search_area_clone() {
 function add_input_area_listeners(){
   let input_area = document.getElementById("input_area");
 
-   input_area.addEventListener('input',  function(e) {
-    e.stopPropagation();
+   input_area.addEventListener('input',  function() {
     let entry = input_area.value.toLowerCase();
      get_suggestions(entry);
   })
-  input_area.addEventListener('click', function(e) {
-    e.stopPropagation();
+  input_area.addEventListener('click', function() {
+
     input_area.value = '';
   })
 }
@@ -208,8 +201,8 @@ function add_suggestions_box(data) {
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
-      suggestion.addEventListener('click', function(e) {
-        e.stopPropagation();
+      suggestion.addEventListener('click', function() {
+
        data = {};
        get_meaning({"word":suggestion.getAttribute('value')});
       })
@@ -244,8 +237,8 @@ function set_definition_page(meaning) {
   clear('container');
   switch_css_to('definition.css');
    let back = create_back_button();
-  back.addEventListener('click', function(e) {
-    e.stopPropagation();
+  back.addEventListener('click', function() {
+
     set_search_page(e);
   });
   add_to_container(back);
