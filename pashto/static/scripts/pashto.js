@@ -61,7 +61,7 @@ function set_home_page() {
   document.body.innerHTML = main_container;
   document.getElementById("input_area").addEventListener("click", function(e) {
     e.stopPropagation();
-    set_home_page();
+    set_search_page();
   });
   document.getElementById("About").addEventListener("click", function(e) {
     e.stopPropagation();
