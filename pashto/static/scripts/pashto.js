@@ -177,7 +177,7 @@ async function get_suggestions(query) {
 })}
 }
 
-function add_suggestions_box(data) {
+async function add_suggestions_box(data) {
   
   for (i = 0; i < data.length; i++){
     if (data[i]['pashto']) {
