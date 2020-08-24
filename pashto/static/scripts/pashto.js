@@ -180,7 +180,7 @@ else {
 }
 }}
 
-async function add_suggestions_box(data) {
+function add_suggestions_box(data) {
   let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
   if (document.getElementById('suggestions_box')) {
     clear('suggestions_box');
@@ -189,26 +189,23 @@ async function add_suggestions_box(data) {
   
   for (i = 0; i < data.length; i++){
     var curr_page_is_search_page =true;
-    if (data[i]['pashto'] && curr_page_is_search_page) {
+    if (data[i]['pashto'] && search_page) {
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
-      
-      suggestion.addEventListener('click', function() {
-       curr_page_is_search_page = false;
-       get_meaning({"word":suggestion.getAttribute('value')});
-      });
-
       suggestions_box.append(suggestion);
-    } else {
-      break;
-    }
+    } 
   }
-    add_to_container(suggestions_box);
-  
-}
+  add_to_container(suggestions_box);
 
+  let suggestions_list = document.getElementById('suggestions_box').childNodes;
+  suggestions_list.forEach(function(element) {
+    element.addEventListener('click', function() {
+    get_meaning(element.value);
+  })
+})
+}
 
 /*-----------------------------------------------------------------------
 
