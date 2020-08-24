@@ -75,24 +75,26 @@ Search Page
 
 function set_about_page() {
   clear('container');
-  switch_css_to('about.css');
 
-  let back = create_back_button();
-  back.addEventListener('click', function() {
+
+  switch_css_to('about.css');
+  let about_back = create_back_button();
+  about_back.addEventListener('click', function() {
     clear('container');
     set_home_page();
   });
 
-  add_to_container(back);
+  
 
-  let holder = createDiv('holder', 'holder', 'holder', '');
+  let about_content = createDiv('about_content', 'about_content', 'about_content', '');
   let heading = createDiv('heading ', 'heading', 'heading', 'About');
   let content = createDiv('content', 'content', 'content', 'I will write this eventually.');
 
-  holder.append(heading);
-  holder.append(content);
+  about_content.append(heading);
+  about_content.append(content);
+  add_to_container(about_back);
+  add_to_container(about_content);
 
-  add_to_container(holder);
 }
 
 
