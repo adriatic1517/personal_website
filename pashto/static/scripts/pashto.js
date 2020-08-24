@@ -189,7 +189,7 @@ async function add_suggestions_box(data) {
   
   for (i = 0; i < data.length; i++){
     var curr_page_is_search_page =true;
-    if (data[i]['pashto'] && search_page) {
+    if (data[i]['pashto'] && curr_page_is_search_page) {
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
