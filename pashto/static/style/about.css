@@ -4,26 +4,27 @@
 body {
 	font-size: 16px; 
 	font-family: 'Noto Naskh Arabic', serif;
-
-}
-
-.container {
-	display: grid;
-	grid-template-columns: repeat(10, 10vw);
-	grid-template-rows: repeat(10, 10vh);
 	background-image: url(../images/bukhara.jpg);
   	background-size: 100%;
 	background-repeat:no-repeat;
 	background-position-x:5vw 5vw;
 	background-position-y:5vh;
 	touch-action:manipulation;
+
 }
 
-.holder {
-	grid-row: 3/8;
+.container {
+	display: grid;
+	grid-template-columns: repeat(10, 10vw);
+	grid-template-rows: 5vh 5vh 50vh auto;
+	
+}
+
+.about_content {
+	grid-row: 3/4;
 	grid-column:2/10;
 	display:grid;
-	grid-template-rows: 8vh 4vh auto;
+	grid-template-rows: 8vh auto;
 	grid-template-columns: repeat(10, 1fr);
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 0.5vw solid rgba(0, 0, 0, 0.15);
@@ -36,16 +37,13 @@ body {
 	grid-column:1/11;
 	text-align: center;
 	font-size: 5.5vh;
-	color: #424242
+	color: #BE1C6A;
 }
 
-
-
-.About {
-	grid-row: 3;
-	grid-column:2/10;
-	font-size: 3vh;
-	overflow: scroll;
+.content {
+	grid-row: 2/3;
+	grid-column: 1/11;
+	overflow:scroll;
 }
 
 .back {

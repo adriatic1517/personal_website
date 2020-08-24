@@ -196,7 +196,6 @@ async function add_suggestions_box(data) {
   let suggestions_list = document.getElementById('suggestions_box').childNodes;
   suggestions_list.forEach(function(element) {
     element.addEventListener('click', function() {
-    document.getElementById('suggestions_box').remove();
     get_meaning({'word':element.getAttribute('value')});
   })
 })
