@@ -65,7 +65,7 @@ function set_home_page() {
   });
   document.getElementById("About").addEventListener("click", function(e) {
     e.stopPropagation();
-    set_home_page();
+    set_about_page();
   });
 }
 
