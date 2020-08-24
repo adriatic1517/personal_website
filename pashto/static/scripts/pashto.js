@@ -68,7 +68,8 @@ Search Page
 
 ------------------------------------------------------------------------*/
 
-function set_about_page() {
+function set_about_page(e) {
+  e.stopPropagation();
   clear('container');
   switch_css_to('about.css');
 
@@ -99,7 +100,8 @@ Search Page
 ------------------------------------------------------------------------*/
 
 
-function set_search_page() {
+function set_search_page(e) {
+e.stopPropagation();
 let screenWidth = window.screen.width;
 if (screenWidth > 700) {
   set_desktop_search_page();
