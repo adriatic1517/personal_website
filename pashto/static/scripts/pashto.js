@@ -75,11 +75,7 @@ function set_about_page(e) {
   switch_css_to('about.css');
 
   let back = create_back_button();
-  back.addEventListener('click', function(e) {
-    e.stopPropagation();
-    clear('container');
-    set_home_page();
-  });
+  
 
   add_to_container(back);
 
