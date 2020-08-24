@@ -167,7 +167,8 @@ function add_input_area_listeners(){
     let entry = input_area.value.toLowerCase();
      get_suggestions(entry);
   })
-  input_area.addEventListener('click', function() {
+  input_area.addEventListener('click', function(e) {
+    e.stopPropagation();
     input_area.value = '';
   })
 }
@@ -206,7 +207,8 @@ function add_suggestions_box(data) {
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
-      suggestion.addEventListener('click', function() {
+      suggestion.addEventListener('click', function(e) {
+        e.stopPropagation();
        data = {};
        get_meaning({"word":suggestion.getAttribute('value')});
       })
@@ -241,8 +243,9 @@ function set_definition_page(meaning) {
   clear('container');
   switch_css_to('definition.css');
    let back = create_back_button();
-  back.addEventListener('click', function() {
-    set_search_page();
+  back.addEventListener('click', function(e) {
+    e.stopPropagation();
+    set_search_page(e);
   });
   add_to_container(back);
   let holder = createDiv('holder', 'holder', 'holder', '');
