@@ -187,7 +187,7 @@ async function get_suggestions(query) {
 async function add_suggestions_box(data) {
   
   for (i = 0; i < data.length; i++){
-    if (data[i]['pashto']) {
+    if (data[i]['pashto'] && document.getElementById('suggestions_box')) {
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
