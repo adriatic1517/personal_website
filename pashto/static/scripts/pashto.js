@@ -161,7 +161,7 @@ function add_input_area_listeners(){
 
 
 
-function get_suggestions(query) {
+async function get_suggestions(query) {
   //data format {'query': search query}
  let data = {"query": query};
  if (data['query']){
@@ -180,7 +180,7 @@ else {
 }
 }}
 
-function add_suggestions_box(data) {
+async function add_suggestions_box(data) {
   let suggestions_box = createDiv('suggestions_box', 'suggestions_box');
   if (document.getElementById('suggestions_box')) {
     clear('suggestions_box');
@@ -198,7 +198,7 @@ function add_suggestions_box(data) {
       suggestion.addEventListener('click', function() {
        curr_page_is_search_page = false;
        get_meaning({"word":suggestion.getAttribute('value')});
-      })
+      });
 
       suggestions_box.append(suggestion);
     } else {
