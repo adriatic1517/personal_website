@@ -25,6 +25,7 @@ function clear(element) {
   while (node.firstChild) {
      node.removeChild(node.firstChild);
    }
+   document.getElementById(element) = get_and_clone(element);
 }
 
 function add_to_container(element) {
