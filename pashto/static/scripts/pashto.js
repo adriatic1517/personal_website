@@ -193,7 +193,7 @@ async function add_suggestions_box(data) {
       document.getElementById('suggestions_box').append(suggestion);
     } 
   }
-  if (document.getElementById('suggestions_box') {
+  if (document.getElementById('suggestions_box')) {
   let suggestions_list = document.getElementById('suggestions_box').childNodes;
   suggestions_list.forEach(function(element) {
     element.addEventListener('click', function() {
