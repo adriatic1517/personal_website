@@ -60,10 +60,10 @@ function set_home_page() {
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
   document.getElementById("input_area").addEventListener("click", function() {
-    set_search_page(e);
+    set_search_page();
   });
   document.getElementById("About").addEventListener("click", function() {
-    set_about_page(e);
+    set_about_page();
   });
 }
 
@@ -239,7 +239,7 @@ function set_definition_page(meaning) {
    let back = create_back_button();
   back.addEventListener('click', function() {
 
-    set_search_page(e);
+    set_search_page();
   });
   add_to_container(back);
   let holder = createDiv('holder', 'holder', 'holder', '');
