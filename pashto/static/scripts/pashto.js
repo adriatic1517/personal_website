@@ -188,22 +188,20 @@ function add_suggestions_box(data) {
   }
   
   for (i = 0; i < data.length; i++){
-    let word_clicked=false;
+
     if (data[i]['pashto']) {
       let curr = data[i];
       suggestion_innerHTML = (curr['pashto'] + " " + curr['phonetic'] +" " + curr['meaning']).slice(0,50);
 
       let suggestion = createDiv('suggestion','suggestion', curr['pashto'],suggestion_innerHTML);
       suggestion.addEventListener('click', function() {
-        word_clicked=true;
-        suggestions_box = null;
+        document.getElementById('suggestions_box').remove();
         clear('container');
        data = {};
        get_meaning({"word":suggestion.getAttribute('value')});
       })
-      if (word_clicked) {
-        break;
-      }
+
+    
       suggestions_box.append(suggestion);
     }
   }
