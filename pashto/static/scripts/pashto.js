@@ -54,8 +54,9 @@ const search_area_clone = get_and_clone('search_area');
 Home Page 
 
 ------------------------------------------------------------------------*/
-function set_home_page() {
+function set_home_page(e) {
   /*First View*/
+  e.stopPropagation();
   clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
@@ -84,7 +85,7 @@ function set_about_page(e) {
   back.addEventListener('click', function(e) {
     e.stopPropagation();
     clear('container');
-    set_home_page();
+    set_home_page(e);
   });
 
   add_to_container(back);
