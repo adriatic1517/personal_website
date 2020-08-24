@@ -170,7 +170,6 @@ function add_input_area_listeners(){
 
 async function get_suggestions(query) {
   //data format {'query': search query}
- clear('suggestions_box');
  let data = {"query": query};
  if (data['query']){
   const response = fetch('update_suggestions', {
