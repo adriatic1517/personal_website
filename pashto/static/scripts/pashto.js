@@ -65,7 +65,7 @@ function set_home_page() {
   });
   document.getElementById("About").addEventListener("click", function(e) {
     e.stopPropagation();
-    set_about_page();
+    set_about_page(e);
   });
 }
 
@@ -75,7 +75,8 @@ Search Page
 
 ------------------------------------------------------------------------*/
 
-function set_about_page() {
+function set_about_page(e) {
+  e.stopPropagation();
   clear('container');
   switch_css_to('about.css');
 
