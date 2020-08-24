@@ -165,7 +165,7 @@ function get_suggestions(query) {
   //data format {'query': search query}
  let data = {"query": query};
  if (data['query']){
-  const response =  fetch('update_suggestions', {
+  const response = await fetch('update_suggestions', {
     method: 'POST',headers: {
       'Content-Type': 'application/json'
     },
