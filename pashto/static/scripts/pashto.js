@@ -150,6 +150,13 @@ function add_input_area_listeners(){
   let input_area = document.getElementById("input_area");
 
    input_area.addEventListener('input',  async function() {
+    if (document.getElementById('suggestions_box') != null) {
+      document.getElementById('suggestions_box').remove();
+    } else {
+      document.getElementById('container').appendChild(
+        createDiv('suggestions_box', 'suggestions_box')
+        );
+    }
     let entry = input_area.value.toLowerCase();
      await get_suggestions(entry);
   })
