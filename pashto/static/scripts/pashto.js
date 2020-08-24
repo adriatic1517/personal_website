@@ -106,8 +106,8 @@ Search Page
 ------------------------------------------------------------------------*/
 
 
-function set_search_page(e) {
-e.stopPropagation();
+function set_search_page() {
+
 let screenWidth = window.screen.width;
 if (screenWidth > 700) {
   set_desktop_search_page();
