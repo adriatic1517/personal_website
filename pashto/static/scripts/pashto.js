@@ -61,7 +61,7 @@ function set_home_page() {
   document.body.innerHTML = main_container;
   document.getElementById("input_area").addEventListener("click", function(e) {
     e.stopPropagation();
-    set_search_page();
+    set_search_page(e);
   });
   document.getElementById("About").addEventListener("click", function(e) {
     e.stopPropagation();
@@ -106,8 +106,8 @@ Search Page
 ------------------------------------------------------------------------*/
 
 
-function set_search_page() {
-
+function set_search_page(e) {
+e.stopPropagation();
 let screenWidth = window.screen.width;
 if (screenWidth > 700) {
   set_desktop_search_page();
