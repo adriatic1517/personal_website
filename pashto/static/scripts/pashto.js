@@ -59,12 +59,8 @@ function set_home_page() {
   clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
-  document.getElementById("input_area").addEventListener("click", function() {
-    set_search_page();
-  });
-  document.getElementById("About").addEventListener("click", function() {
-    set_about_page();
-  });
+  document.getElementById("input_area").addEventListener("click",set_search_page);
+  document.getElementById("About").addEventListener("click", set_about_page);
 }
 
 /*-----------------------------------------------------------------------
@@ -79,10 +75,7 @@ function set_about_page() {
 
   switch_css_to('about.css');
   let about_back = create_back_button();
-  about_back.addEventListener('click', function() {
-    clear('container');
-    set_home_page();
-  });
+  about_back.addEventListener('click',set_home_page);
 
   
 
@@ -136,10 +129,7 @@ function set_mobile_search_page() {
 
   /*Add back button */
   let back = create_back_button();
-  back.addEventListener('click', function() {
-    clear('container');
-    set_home_page();
-  });
+  back.addEventListener('click', set_home_page);
   add_to_container(back);
 
 
@@ -239,10 +229,7 @@ function set_definition_page(meaning) {
   clear('container');
   switch_css_to('definition.css');
    let back = create_back_button();
-  back.addEventListener('click', function() {
-
-    set_search_page();
-  });
+  back.addEventListener('click', set_search_page);
   add_to_container(back);
   let holder = createDiv('holder', 'holder', 'holder', '');
   let word = createDiv('word', 'word', 'word', meaning['pashto']);
