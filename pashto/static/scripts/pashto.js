@@ -149,7 +149,7 @@ function add_search_area_clone() {
 function add_input_area_listeners(){
   let input_area = document.getElementById("input_area");
 
-   input_area.addEventListener('input',  function() {
+   input_area.addEventListener('input',  async function() {
     let entry = input_area.value.toLowerCase();
      await get_suggestions(entry);
   })
