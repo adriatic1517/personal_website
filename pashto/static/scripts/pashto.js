@@ -21,7 +21,7 @@ function get_and_clone(element) {
 }
 
 function clear(element) {
-  let node = document.getElementById(element)
+  let node = document.getElementById(element);
   while (node.firstChild) {
      node.removeChild(node.firstChild);
    }
@@ -29,6 +29,12 @@ function clear(element) {
 
 function add_to_container(element) {
   document.getElementById('container').appendChild(element);
+}
+
+
+function create_back_button(){
+  let back = createDiv('back', 'back', '', "<img src='pashto/static/images/back.svg' />");
+  return back;
 }
 
 //----------------------------------------------------------------
@@ -67,10 +73,12 @@ function set_about_page() {
   switch_css_to('about.css');
 
   let back = create_back_button();
-  back.addEventListener('click', function() {
+  back.addEventListener('click', function(e) {
+    e.stopPropagation();
     clear('container');
     set_home_page();
   });
+
   add_to_container(back);
 
   let holder = createDiv('holder', 'holder', 'holder', '');
@@ -241,12 +249,6 @@ function set_definition_page(meaning) {
 
 
 
-function create_back_button(){
-  let back = createDiv('back', 'back', '', "<img src='pashto/static/images/back.svg' />");
-  
-
-  return back;
-}
 
 
 /*-----------------------------------------------------------------------
