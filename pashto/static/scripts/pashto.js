@@ -7,7 +7,7 @@ function switch_css_to(name) {
 }
 
 function createDiv(class_ ='', id ='', value='', innerHTML=''){
-  let element = document.createElement('div')
+  let element = document.createElement('div');
   element.setAttribute('class', class_);
   element.setAttribute('id', id);
   element.setAttribute('value', value);
