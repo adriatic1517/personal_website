@@ -59,8 +59,14 @@ function set_home_page() {
   clear('container');
   switch_css_to('main.css');
   document.body.innerHTML = main_container;
-  document.getElementById("input_area").addEventListener("click", set_search_page);
-  document.getElementById("About").addEventListener("click", set_about_page);
+  document.getElementById("input_area").addEventListener("click", function(e) {
+    e.stopPropagation();
+    set_home_page();
+  });
+  document.getElementById("About").addEventListener("click", function(e) {
+    e.stopPropagation();
+    set_home_page();
+  });
 }
 
 /*-----------------------------------------------------------------------
@@ -69,13 +75,16 @@ Search Page
 
 ------------------------------------------------------------------------*/
 
-function set_about_page(e) {
-  e.stopPropagation();
+function set_about_page() {
   clear('container');
   switch_css_to('about.css');
 
   let back = create_back_button();
-  
+  back.addEventListener('click', function(e) {
+    e.stopPropagation();
+    clear('container');
+    set_home_page();
+  });
 
   add_to_container(back);
 
@@ -129,7 +138,8 @@ function set_mobile_search_page() {
 
   /*Add back button */
   let back = create_back_button();
-  back.addEventListener('click', function() {
+  back.addEventListener('click', function(e) {
+    e.stopPropagation();
     clear('container');
     set_home_page();
   });
@@ -152,7 +162,8 @@ function add_search_area_clone() {
 function add_input_area_listeners(){
   let input_area = document.getElementById("input_area");
 
-   input_area.addEventListener('input',  function() {
+   input_area.addEventListener('input',  function(e) {
+    e.stopPropagation();
     let entry = input_area.value.toLowerCase();
      get_suggestions(entry);
   })
