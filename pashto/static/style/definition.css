@@ -77,6 +77,16 @@ body {
 }
 
 
+@media (min-device-width: 1400px) {
+
+.container {
+	background-size:auto;
+}
+	.holder {
+		margin-left:7vw;
+		margin-right:7vw;
+	}
+}
 
 
 
