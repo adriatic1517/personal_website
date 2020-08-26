@@ -11,6 +11,7 @@ def ngrams(string, n=2):
     return [''.join(ngram) for ngram in ngrams]
 
 def search(df,column, word, threshold = 0.5, top=10):
+    word = word.encode()
     vectorizer = TfidfVectorizer(min_df=1, analyzer=ngrams) #vectorizer with ngrams
     tf_idf_matrix_clean = vectorizer.fit_transform(df[column]) #fit the data
     tf_idf_matrix_dirty = vectorizer.transform(pd.Series([word])) #transform data on input
@@ -24,7 +25,5 @@ def search(df,column, word, threshold = 0.5, top=10):
     ans = ans.sort_values(by='similarity', ascending=False)[:top]
     print(ans)
     suggestions = ans['word'].to_list()
-    if len(suggestions) >0:
-        return suggestions
-    return []
+    return suggestions
 
