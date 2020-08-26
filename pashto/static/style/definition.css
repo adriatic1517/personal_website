@@ -72,19 +72,19 @@ body {
 	background-size:auto;
 }
 	.holder {
-		grid-column: 4/8;
+		grid-row: 3/10;
+		grid-column: 3/9;
+		
 	}
 }
 
 
-@media (min-device-width: 1400px) {
+@media (min-device-width: 1000px) {
 
-.container {
-	background-size:auto;
-}
-	.holder {
-		margin-left:7vw;
-		margin-right:7vw;
+.holder {
+		grid-row: 3/10;
+		grid-column: 4/8;
+		
 	}
 }
 

@@ -30,6 +30,9 @@ body {
 	border: 0.5vw solid rgba(0, 0, 0, 0.15);
 	border-radius: 10vw;
 	
+		padding-left:3vw;
+		padding-right:3vw; 
+	margin-bottom: 2vh;
 }
 
 .heading {
@@ -79,6 +82,7 @@ body {
 @media (min-device-width: 950px) {
 	.about_content{
 		grid-column: 4/8;
+
 	}
 }
 
