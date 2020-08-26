@@ -74,8 +74,8 @@ def get_meaning():
 
 @pashto_bp.route('/enter_press', methods=['POST'])
 def handle_enter():
-    word = request.form["enter_press"]
+    return false
 
-    return word
+
 
 
