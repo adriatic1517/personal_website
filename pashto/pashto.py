@@ -47,13 +47,16 @@ def my_form():
 
 @pashto_bp.route('/update_suggestions', methods=['POST'])
 def my_form_post():
-    query = request.get_json()
-    words = dict_trie.keys_with_prefix(query);
-    response = [dict_trie.get_data(i) for i in words][:100]
-    if len(response) < 10:
-        response += [dict_trie.get_data(i) for i in search(pashto_df, 'normalized', query, 0.5, 10)]
-        response += [dict_trie.get_data(i) for i in search(pashto_df, 'pashto', query, 0.5, 10)]
+    try:
+        query = request.get_json()
+        words = dict_trie.keys_with_prefix(query);
+        response = [dict_trie.get_data(i) for i in words][:100]
 
+        if len(response) < 10:
+            response += [dict_trie.get_data(i) for i in search(pashto_df, 'normalized', query, 0.5, 10)]
+            response += [dict_trie.get_data(i) for i in search(pashto_df, 'pashto', query, 0.5, 10)]
+    except Exception as e:
+        print(e)
 
     return make_response(jsonify(response), 200)
     
