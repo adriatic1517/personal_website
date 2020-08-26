@@ -248,7 +248,7 @@ Start
 
 ------------------------------------------------------------------------*/
 
-about_text = "A summer project to create a modern digital pashto dictionary."
+const about_text = "A summer project to create a modern digital pashto dictionary.";
 set_home_page();
 
 
