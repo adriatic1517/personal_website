@@ -18,8 +18,8 @@ body {
 }
 
 .holder {
-	grid-row: 3/10;
-	grid-column:4/8;
+	grid-row: 3/7;
+	grid-column:3/9;
 	display:grid;
 	grid-template-rows: 8vh 4vh auto;
 	grid-template-columns: repeat(10, 1fr);
@@ -70,6 +70,14 @@ body {
 
 .container {
 	background-size:auto;
-}}
+}
+	.holder {
+		grid-column: 4/8;
+	}
+}
+
+
+
+
 
 

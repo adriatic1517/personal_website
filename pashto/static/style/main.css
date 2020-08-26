@@ -10,12 +10,10 @@ font-family: 'Noto Naskh Arabic', serif;
 
 }
 
-
-
 .container {
 	font-family: 'Noto Naskh Arabic', serif;
 	display:grid;
-	grid-template-rows: 5vh 10vh 10vh 400px auto;
+	grid-template-rows: 5vh 10vh 10vh 4vh 400px auto;
 	grid-template-columns: 4vw repeat(10, 1fr) 8vw;
 	touch-action: manipulation;
 
@@ -36,19 +34,17 @@ border: 1px solid white;
 border-radius 10vw;
 background-color: rgba(255, 255, 255, 0.7);
 
-
-	
 }
 
 .search_area {
 	grid-row:4/4;
-	grid-column:4/8;
+	grid-column:1/13;
+	text-align: center;
+	margin-left: 20px;
 }
 
 input,text_area, search{
-	width:80vw;
-	height:8vh;
-	margin:0px;
+  width:60vw;
 	border:solid 1px gray;
 	border-radius:10vw;
 	box-shadow:1px 1px 1px lightgray;
@@ -80,33 +76,28 @@ a{
 	font-size: 1.5vh;
 }
 
-input,text_area, search{
-	width: 60vw;
-	height: 5vh;
-}
+
 
 
 @media (min-device-width: 700px) {
-
-.container {
+	
+body {
 	background-size:auto;
 }
 
-.search_area {
-	grid-column:4/8;
-	width:100%;
-	height:97%;
-}
-input,text_area, search{
-	width: 100%;
-	height: 100%;
-}
-	.suggestions_box {
-		grid-row:5/10;
-		grid-column:4/8;
-		font-size:4vh;
-		padding-left:1vw;
-		padding-right:1vw;
+
+	input, text_area, search {
+		width:35vw;
+	}
+	
+.suggestions_box {
+		grid-row:5/5;
+		grid-column:5/9;
+		font-size:3vh;
+	margin-top: 5px;
+	margin-left:3vw;
+	margin-right:-2vw;
+		
 		background-color:rgba(255, 255, 255, 0.8);
 		border: 1px solid;
 		border-radius: 1vw;
