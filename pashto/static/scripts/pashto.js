@@ -81,7 +81,7 @@ function set_about_page() {
 
   let about_content = createDiv('about_content', 'about_content', 'about_content', '');
   let heading = createDiv('heading ', 'heading', 'heading', 'About');
-  let content = createDiv('content', 'content', 'content', 'I will write this eventually.');
+  let content = createDiv('content', 'content', 'content', about_text);
 
   about_content.append(heading);
   about_content.append(content);
@@ -248,7 +248,7 @@ Start
 
 ------------------------------------------------------------------------*/
 
-
+about_text = "A summer project to create a modern digital pashto dictionary."
 set_home_page();
 
 
