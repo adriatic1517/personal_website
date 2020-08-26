@@ -48,7 +48,7 @@ def my_form():
 @pashto_bp.route('/update_suggestions', methods=['POST'])
 def my_form_post():
     try:
-        query = request.get_json()
+        query = request.get_json().encode('utf-8')
         words = dict_trie.keys_with_prefix(query);
         response = [dict_trie.get_data(i) for i in words][:100]
 

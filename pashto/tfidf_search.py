@@ -23,7 +23,6 @@ def search(df,column, word, threshold = 0.5, top=10):
 
     ans = ans[ans['similarity']>threshold]
     ans = ans.sort_values(by='similarity', ascending=False)[:top]
-    print(ans)
     suggestions = ans['word'].to_list()
     return suggestions
 
