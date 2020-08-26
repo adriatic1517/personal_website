@@ -56,8 +56,8 @@ body {
 .back {
 	grid-row: 1/1;
 	grid-column: 1/1;
-	width: 5vw;
-	height: 5vw;
+	width: 4vw;
+	height: 4vw;
 }
 
 .back > img {
@@ -72,19 +72,20 @@ body {
 	background-size:auto;
 }
 	.holder {
-		grid-row: 3/10;
+		grid-row: 3/9;
 		grid-column: 3/9;
-		
 	}
 }
 
 
-@media (min-device-width: 1000px) {
+@media (min-device-width: 1400px) {
 
-.holder {
-		grid-row: 3/10;
-		grid-column: 4/8;
-		
+.container {
+	background-size:auto;
+}
+	.holder {
+		margin-left:7vw;
+		margin-right:7vw;
 	}
 }
 
