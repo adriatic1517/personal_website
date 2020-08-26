@@ -12,14 +12,14 @@ body {
 	background-image: url(../images/bukhara.jpg);
   	background-size: 100%;
 	background-repeat:no-repeat;
-	background-position-x:5vw 5vw;
+	background-position-x:center;
 	background-position-y:5vh;
 	touch-action:manipulation;
 }
 
 .holder {
-	grid-row: 3/8;
-	grid-column:2/10;
+	grid-row: 3/10;
+	grid-column:4/8;
 	display:grid;
 	grid-template-rows: 8vh 4vh auto;
 	grid-template-columns: repeat(10, 1fr);
@@ -61,8 +61,8 @@ body {
 }
 
 .back > img {
-	width: 130%;
-	height: 160%;
+	width: 100%;
+	height: 100%;
 }
 
 
