@@ -76,6 +76,10 @@ def get_meaning():
 def render_about():
     return render_template('about.html')
 
+@pashto_bp.route('/kind_people')
+def render_kind():
+    return render_template('kind_people.html')
+
 
 @pashto_bp.route('/disable_form',  methods=['POST'])
 def disable_form():
