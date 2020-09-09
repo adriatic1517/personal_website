@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" href="pashto/static/style/definition.css">
+<link rel= "stylesheet" href= "{{ url_for('pashto_bp.static',filename='style/definition.css') }}">
+
+<script src="{{url_for('pashto_bp.static', filename='scripts/copy.js')}}" defer></script>
+
+</head>
+
+<body>
+
+<div class="container" id="container">
+	<div class = "holder" id ="holder" value="holder">
+		
+		<div class="word" id="word" value="word">{{word}}</div>
+		<div class="phonetic" id="phonetic" value="phonetic">{{phonetic}}</div>
+		<div class="definition" id="definition" value="definition">{{definition}}
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+</html>

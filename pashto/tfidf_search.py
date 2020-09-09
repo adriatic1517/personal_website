@@ -10,8 +10,13 @@ def ngrams(string, n=2):
     ngrams = zip(*[string[i:] for i in range(n)])
     return [''.join(ngram) for ngram in ngrams]
 
-def search(df,column, word, threshold = 0.5, top=10):
-    vectorizer = TfidfVectorizer(min_df=1, analyzer=ngrams) #vectorizer with ngrams
+
+
+def search(df,column, word, threshold = 0.5, top=10, english=False):
+    vectorizer = TfidfVectorizer(min_df=1, analyzer=ngrams)
+
+
+     #vectorizer with ngrams
     tf_idf_matrix_clean = vectorizer.fit_transform(df[column]) #fit the data
     tf_idf_matrix_dirty = vectorizer.transform(pd.Series([word])) #transform data on input
     similarity = cosine_similarity(tf_idf_matrix_clean, tf_idf_matrix_dirty) #get cosine_similarity between two 

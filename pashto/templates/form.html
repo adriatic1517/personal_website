@@ -1,18 +1,29 @@
 <html>
 <head>
 <script src="{{url_for('pashto_bp.static', filename='scripts/pashto.js')}}" defer></script>
-<link rel= "stylesheet" href= "{{ url_for('pashto_bp.static',filename='style/definition.css') }}" id ="curr_css">
+<link rel= "stylesheet" href= "{{ url_for('pashto_bp.static',filename='style/main.css') }}" id ="curr_css">
 </head>
 
 <body>
 <div class = "container" id = "container">
-		<div class = "About" id = "About"><div class ="content">About</div></div>
-        <div class = "heading"> د پښتو ژبې قاموس </div>
-          <form method="POST" class="search_area" id = "search_area" onSubmit="return false;">
-            <input list ="suggestions" type="search" id="input_area" name="input_area"
-            aria-label="Search through site content" autoselect>
-          </form>
-      </div>
+		<!-- About -->
+        <div class = "About" id = "About"><a href = "/pashto/about"><u>About</u></a></div>
 
+		<!-- Heading -->
+        <div class = "heading"> د پښتو ژبې قاموس </div>
+
+        <!-- Form -->
+          <form method="POST" class="search_area" id = "search_area" onsubmit="return false;">
+            <input type="search" id="input_area" name="input_area"
+            aria-label="Search through site content" autoselect >
+          </form>
+
+           <form method="POST" id = "submit_data_form" action ="/pashto/meaning">
+          <input type="hidden" id ="submit_data" name = "submit_data">
+      		</form>
+
+    
+      	
+ </div>
 </body>
 </html>

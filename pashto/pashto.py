@@ -8,7 +8,7 @@ from personal_website.pashto.tfidf_search import search
 import pandas as pd
 import numpy as np
 
-with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
+with open('/Users/emadsiddiq/Projects/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
 pashto_df = pd.DataFrame(words_dict).transpose()
 
@@ -21,17 +21,8 @@ dict_trie.add_dict(words_dict)
 dict_trie.add_dict(words_dict,'normalized')
 
 
-choices = []
-for i in words_dict:
-        choices.append(words_dict[i]['pashto'])
-        choices.append(words_dict[i]['phonetic'])
 
 
-df = pd.read_json('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json').transpose()
-
-
-
-    
 
 
 pashto_bp = Blueprint('pashto_bp', __name__,
@@ -63,18 +54,41 @@ def my_form_post():
 
 @pashto_bp.route('/meaning', methods=['POST'])
 def get_meaning():
-    word = request.get_json()
-    word = word['word']
-    try:
-        response = dict_trie.get_data(word)
-    except Exception as e:
-        response = {}
-    return make_response(jsonify(response), 200)
-   
+    """Example {'meaning': 's.m. (Pl. of طرف) Sides, skirts, districts, environs,
+     confines.', 
+    'normalized': 'atraf',
+    'pashto': 'اطراف',
+    'phonetic': 'at̤-rāf,',
+    'root': 'Arabic'}"""
+    meaning = request.form['submit_data']
+    meaning = json.loads(meaning)
+    return render_template('definition.html', word=meaning['pashto'], phonetic=meaning['phonetic'],definition=meaning['meaning'])
+    
+    
 
-@pashto_bp.route('/enter_press', methods=['POST'])
-def handle_enter():
-    return false
+    
+
+
+@pashto_bp.route('/about')
+def render_about():
+    return render_template('about.html')
+
+
+@pashto_bp.route('/disable_form',  methods=['POST'])
+def disable_form():
+    return False
+
+meanings_dict = {}
+for i in words_dict.keys():
+    meanings_dict[words_dict[i]['meaning']]= words_dict[i]
+
+
+@pashto_bp.route('/english')
+def english_words():
+    return render_template('english.html')
+
+
+
 
 
 
