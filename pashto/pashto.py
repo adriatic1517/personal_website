@@ -78,15 +78,6 @@ def render_about():
 def disable_form():
     return False
 
-meanings_dict = {}
-for i in words_dict.keys():
-    meanings_dict[words_dict[i]['meaning']]= words_dict[i]
-
-
-@pashto_bp.route('/english')
-def english_words():
-    return render_template('english.html')
-
 
 
 
