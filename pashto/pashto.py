@@ -8,7 +8,7 @@ from personal_website.pashto.tfidf_search import search
 import pandas as pd
 import numpy as np
 
-with open('/Users/emadsiddiq/Projects/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
+with open('/home/e/em/emadsiddiq/app/personal_website/pashto/data/Pashto_Raverty_full.json') as json_file:
     words_dict = json.load(json_file)
 pashto_df = pd.DataFrame(words_dict).transpose()
 
