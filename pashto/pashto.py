@@ -60,9 +60,12 @@ def get_meaning():
     'pashto': 'اطراف',
     'phonetic': 'at̤-rāf,',
     'root': 'Arabic'}"""
-    meaning = request.form['submit_data']
-    meaning = json.loads(meaning)
-    return render_template('definition.html', word=meaning['pashto'], phonetic=meaning['phonetic'],definition=meaning['meaning'])
+    try:
+        meaning = request.form['submit_data']
+        meaning = json.loads(meaning)
+        return render_template('definition.html', word=meaning['pashto'], phonetic=meaning['phonetic'],definition=meaning['meaning'])
+    except Exception as e:
+        return False;
     
     
 

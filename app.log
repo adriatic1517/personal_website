@@ -3,7 +3,8 @@ werkzeug - INFO -  * Restarting with fsevents reloader
 werkzeug - INFO -  * Restarting with fsevents reloader
 werkzeug - INFO -  * Restarting with fsevents reloader
 werkzeug - INFO -  * Restarting with fsevents reloader
-[37mGET /pashto/pashto/static/style/main.css HTTP/1.1[0m" 200 -
+werkzeug - INFO -  * Restarting with fsevents reloader
+[0m" 200 -
 werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 20:01:22] "[37mGET /pashto/pashto/static/images/bukhara.jpg HTTP/1.1[0m" 200 -
 werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 20:01:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 20:01:24] "[37mPOST /pashto/update_suggestions HTTP/1.1[0m" 200 -
