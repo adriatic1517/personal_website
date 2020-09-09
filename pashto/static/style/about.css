@@ -39,6 +39,11 @@ body {
 	overflow: scroll;
 }
 
+a {
+	color:#BE1C6A;
+}
+
+
 
 @media (min-device-width: 700px) {
 
@@ -54,6 +59,10 @@ body {
 			
 	}
 }
+
+
+
+
 
 
 
