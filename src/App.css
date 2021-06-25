@@ -32,7 +32,6 @@ body {
 
 }
 .Portrait>img {
-  border: solid #312f2f 5px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -80,8 +79,8 @@ body {
   }
 
   .Portrait > img {
-    width:25vh;
-      height:30vh;
+    width:250px;
+      height:325px;
   }
 
   .AboutMe{
