@@ -8,7 +8,7 @@ export default class App extends React.Component {
       <div className="Portfolio">
         <Name />
         <Portrait  />
-    
+  
         <AboutMe />
         <Coursework />
         <Projects/>
@@ -51,7 +51,7 @@ class AboutMe extends React.Component {
           working with people and places that have a nice view.
         </p>
 
-        <p> You might be interested in my:<br /><a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/resume/static/data/Emad_Resume.pdf"
+        <p> You might be interested in my:<br /><a href="https://docs.google.com/document/d/1eS-WCB-3v6jgQPzVzHu01ZUovurUX6oi28DjebbdiQ8/edit?usp=sharing"
           >Resume</a> or <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn</a></p>
 
     </div>
