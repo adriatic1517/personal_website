@@ -7,8 +7,6 @@ export default class App extends React.Component {
     return (
       <div className="Portfolio">
         <Name />
-        <Portrait  />
-  
         <AboutMe />
         <Coursework />
         <Projects/>
@@ -29,30 +27,18 @@ class Name extends React.Component {
   }
 }
 
-class Portrait extends React.Component{
-  render(){
-    return(
-    <div className="Portrait">
-      <img src="portrait.jpg" alt='me with a grad cap'/>
-      </div>
-    );
-  }
-}
+
 
 class AboutMe extends React.Component {
   render(){
     return (
       <div className="AboutMe" id = "About Me">
 
-        <p>Hello! I recently graduated from the University of California Berkeley, majoring
-        in Political Economy and Data Science.</p>
+        <p>Hello! I am Emad. 
+          I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. </p>
 
-        <p>I like to play the Rabab, go hiking, play tennis and drink chai. I also enjoy travelling,
-          working with people and places that have a nice view.
-        </p>
-
-        <p> You might be interested in my:<br /><a href="https://docs.google.com/document/d/1eS-WCB-3v6jgQPzVzHu01ZUovurUX6oi28DjebbdiQ8/edit?usp=sharing"
-          >Resume</a> or <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn</a></p>
+        <p> Quick links:<br /><a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/resume/static/data/Emad_Resume.pdf"
+          >Resume</a> and <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn</a></p>
 
     </div>
     );
@@ -66,15 +52,9 @@ class Coursework extends React.Component {
     return (
       <div className="Coursework" id="Coursework">
         <h2>100 Days of AI</h2>
-       
-
         <ul>
-          <li> <a href = "http://emad-resume.herokuapp.com/day1.html"
-            </a></li>
-          
+          <li> <a href = "http://emad-resume.herokuapp.com/day1.html">Day 1</a></li>
         </ul>
-
-        
       </div>
     );
   }
