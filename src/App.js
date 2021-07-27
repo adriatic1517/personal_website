@@ -65,32 +65,16 @@ class Coursework extends React.Component {
   render(){
     return (
       <div className="Coursework" id="Coursework">
-        <h2>Courses</h2>
+        <h2>100 Days of AI</h2>
        
 
-        <h3> Data Science </h3>
         <ul>
-          <li>CS 61A: Structure and Interpretation of Computer Programs</li>
-          <li>CS 61B: Data Structures and Algorithms </li>
-          <li>Data 100: Principles and Techniques of Data Science</li>
-          <li> Math 54: Linear Algebra </li>
-          <li>Stat 140: Probability for Data Science </li>
-          <li>Data C104: Ethics of Data</li> 
-          <li>CS 189: Machine Learning </li>
-          <li> CS 170: Efficient Algorithms and Intractable Problems</li>
+          <li> <a href = "http://emad-resume.herokuapp.com/day1.html"
+            </a></li>
+          
         </ul>
 
-        <h3>Political Economy:</h3>
-        <ul>
-          <li>South Asian 147: An Introduction to Pakistan</li>
-          <li>Polecon 156: Silicon Valley and the Global Economy </li>
-          <li>PE 100: Classical Theories of Political Economy </li>
-          <li>PE 101: Contemporary Theories of Political Economy</li>
-          <li>Legal Studies 190: Information, Media and the Public Discourse</li>
-          <li> Econ 100A: Intermediate Microeconomics </li>
-          <li> Econ 100B: Intermediate Macroeconomics </li>
-          <li>Economics 141: Econometric Analysis </li>
-        </ul>
+        
       </div>
     );
   }
