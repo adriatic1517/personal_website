@@ -7,7 +7,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="Portfolio">
-       
+        <Name/>
+        <Portrait/>
         <AboutMe />
   
       </div>
@@ -21,7 +22,6 @@ class Name extends React.Component {
     return (
       <div className="Name">
          <h1> Emad Siddiq </h1>
-          
       </div>
     );
   }
@@ -38,6 +38,8 @@ class Portrait extends React.Component{
  }}
 
 
+
+
 class AboutMe extends React.Component {
   render(){
     return (
@@ -45,7 +47,7 @@ class AboutMe extends React.Component {
 
         <p>Hello! I am Emad. I graduated this May from UC Berkeley with a Bachelors in Political Economy & Data Science.</p>
         <p> I am interested in Artificial Intelligence and the Machine Learning models that power them.</p>
-        <p> Currently I am doing research on how CNN's can be used for OCR of languages in the Persio-Arabic script</p>
+        <p> Currently I am reading on how CNN's can be used for OCR of languages in the Persio-Arabic script</p>
 
 
         <p> Quick links:<br /><a href="/resume.pdf">Resume</a>
@@ -63,8 +65,7 @@ class Coursework extends React.Component {
     return (
       <div className="Coursework" id="Coursework">
         <h2>100 Days of AI</h2>
-        <p> I will attempt to do a 100 data science explorations in 100 days. Starting
-          July 27th 2021.
+        <p> I will attempt to do a 100 data scienc
         </p>
         <ul>
           <li> <a href = "http://emad-resume.herokuapp.com/day1.html">Day 1: July 27 2021</a></li>
