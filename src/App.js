@@ -7,11 +7,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="Portfolio">
-        <Name />
-        <Portrait/>
+       
         <AboutMe />
-        <Coursework />
-        <Projects/>
+  
       </div>
     );
   }
@@ -45,8 +43,10 @@ class AboutMe extends React.Component {
     return (
       <div className="AboutMe" id = "About Me">
 
-        <p>Hello! I am Emad. 
-          I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. </p>
+        <p>Hello! I am Emad. I graduated this May from UC Berkeley with a Bachelors in Political Economy & Data Science.</p>
+        <p> I am interested in Artificial Intelligence and the Machine Learning models that power them.</p>
+        <p> Currently I am doing research on how CNN's can be used for OCR of languages in the Persio-Arabic script</p>
+
 
         <p> Quick links:<br /><a href="/resume.pdf">Resume</a>
  and <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn</a></p>
@@ -86,6 +86,12 @@ class Projects extends React.Component {
         <a href = "https://ocf.berkeley.edu/~emadsiddiq/pashto"><h3>Dictionary of Pashto</h3></a>
         <p>This project  a one of a kind dictionary of my mother tongue Pashto was born out of a greater objective of
            digitizing Pashto language and literature.</p>
+          
+        <a href = "https://colab.research.google.com/drive/1jVD2GgqDi_ImgGwkXQ8wim1AIsopVD-R?usp=sharing"><h3>NetworkX</h3></a>
+        <p>This was a mini-Project for my Advanced Algorithms class.</p>
+
+
+
       </div>
     );
   }
