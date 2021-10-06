@@ -14,13 +14,13 @@ a {
 
 .hello {
   text-align: center;
-  margin-right:20px;
+  margin-right:25px;
   font-size:18px;
 }
 
 .Portfolio {
   display:grid;
-  grid-template-rows: 1fr 1fr auto;
+  grid-template-rows: 100px 150px 75px 500px;
   grid-template-columns: repeat(10, 1fr);
 }
 

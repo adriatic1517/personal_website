@@ -47,11 +47,6 @@ class AboutMe extends React.Component {
   render(){
     return (
       <div className="AboutMe" id = "About Me">
-        <p className= "Links">
-           <a href="/resume.pdf">Resume</a> |
-           <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn </a> |
-           <a href="https://github.com/adriatic1517"> Github</a>
-            </p>
         
         <p className="hello">Hello and welcome! &#128075;</p>
         
@@ -65,6 +60,12 @@ class AboutMe extends React.Component {
         </p>
 
         <p>I look forward to connecting with you!</p>
+        <p className= "Links">
+           <a href="/resume.pdf">Resume</a> |
+           <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn </a> |
+           <a href="https://github.com/adriatic1517"> Github</a>
+            </p>
+        
 
 
     </div>
@@ -85,32 +86,4 @@ class Coursework extends React.Component {
     );
   }
 }
-
-class Projects extends React.Component {
-  render() {
-    return (
-      <div className="Projects" id = "Projects">
-        <h1> Research</h1>
-        <p>Conducted research for Professor Sonya Katyal’s Trademark & Branding Project as the team’s lead data scientist
-</p>
-
-        <p>Parallelized data extraction from remote XML files, with limited cloud storage (5 GB), for over 100GB of data
-</p>
-
-        <p>Designed a fast matching algorithm for relevant companies from a list provided by Haas School of Business
-</p>
-        
-        
-
-
-
-      </div>
-    );
-  }
-}
-
-
-
-
-
 
