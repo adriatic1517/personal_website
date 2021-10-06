@@ -67,12 +67,17 @@ a {
   grid-column:2/7;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .Portfolio {
     display:grid;
     grid-template-rows: 1fr 1fr auto;
-    grid-template-columns: 2fr 10fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
     font-size: 12px;
+  }
+
+  .hello {
+    margin-left:30px;
+    margin-top: 0px;
   }
 
   .Portrait {
@@ -82,6 +87,10 @@ a {
   .Portrait > img {
     width: 100px;
     height: 100px;
+    
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   .AboutMe {

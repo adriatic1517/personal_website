@@ -48,7 +48,7 @@ class AboutMe extends React.Component {
     return (
       <div className="AboutMe" id = "About Me">
         
-        <p className="hello">Hello and welcome! &#128075;</p>
+        <p className="hello">Hello &#128075;</p>
         
         <p>I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. I am actively looking for entry level engineering positions.
         </p>
@@ -61,7 +61,7 @@ class AboutMe extends React.Component {
 
         <p>I look forward to connecting with you!</p>
         <p className= "Links">
-           <a href="/resume.pdf">Resume</a> |
+           <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
            <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn </a> |
            <a href="https://github.com/adriatic1517"> Github</a>
             </p>
