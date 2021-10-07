@@ -55,8 +55,9 @@ class AboutMe extends React.Component {
         <p> My academic interests center around AI and the ML models that power them.
          Currently I am reading on how CNN's can be used for OCR of languages in the Persio-Arabic script.</p>
         
-        <p>Inspired by Professor Michael Jordans's work on Machine Learning and Micreconomic Theory, 
-          I am driven to <a href="">understand</a> how AI can bring archaic financial and economic institutions into the 21st century.
+        <p>I am fascinated by Professor Michael Jordans's work on Machine Learning and Economics 
+          and believe innovation at their intersection could help bring archaic financial and economic institutions
+          into the 21st century.
         </p>
 
         <p>I look forward to connecting with you!</p>
