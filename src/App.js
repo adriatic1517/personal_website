@@ -63,8 +63,8 @@ class AboutMe extends React.Component {
         <p>
 
           <a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/pashto/">Pashto Dictionary</a>, 
-          <a href="https://tech-khwani.herokuapp.com">Tech-Khwani</a> & 
-          <a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/goodnews/">Good News</a> 
+          <a href="https://tech-khwani.herokuapp.com"> Tech-Khwani</a> & 
+          <a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/goodnews/"> Good News </a> 
 
           are some of the projects I am most proud of (but they take a second to load).
 
