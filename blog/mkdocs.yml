@@ -1,0 +1,13 @@
+site_name: My Docs
+
+theme:
+  name: material
+  palette:
+    primary: black
+
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets

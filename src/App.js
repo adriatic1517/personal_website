@@ -50,8 +50,13 @@ class AboutMe extends React.Component {
         
         <p className="hello">Hello &#128075;</p>
         
-        <p>I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. I am actively looking for entry level engineering positions.
+        <p>
+          
+           I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. 
+           I am very excited to be joining <a href="https://www.fin3.tech/"> Fin3</a> as a Software Engineer.
+        
         </p>
+
         <p> My academic interests center around AI and the ML models that power them.
          Currently I am reading on how CNN's can be used for OCR of languages in the Persio-Arabic script.</p>
         
