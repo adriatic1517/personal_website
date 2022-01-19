@@ -60,9 +60,14 @@ class AboutMe extends React.Component {
         <p> My academic interests center around AI and the ML models that power them.
          Currently I am reading on how CNN's can be used for OCR of languages in the Persio-Arabic script.</p>
         
-        <p>I am fascinated by Professor Michael Jordans's work on Machine Learning and Economics 
-          and believe innovation at their intersection could help bring archaic financial and economic institutions
-          into the 21st century.
+        <p>
+
+          <a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/pashto/">Pashto Dictionary</a>, 
+          <a href="https://tech-khwani.herokuapp.com">Tech-Khwani</a> & 
+          <a href="https://www.ocf.berkeley.edu/~emadsiddiq/run.fcgi/goodnews/">Good News</a> 
+
+          are some of the projects I am most proud of (but they take a second to load).
+
         </p>
 
         <p>I look forward to connecting with you!</p>
