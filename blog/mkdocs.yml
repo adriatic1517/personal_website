@@ -1,9 +1,9 @@
-site_name: My Docs
-
+site_name: Emad's Blog
 theme:
   name: material
   palette:
     primary: black
+
 
 
 markdown_extensions:
