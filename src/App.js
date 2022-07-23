@@ -53,7 +53,7 @@ class AboutMe extends React.Component {
         <p>
           
            I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. 
-           I am very excited to be joining <a href="https://www.fin3.tech/"> Fin3</a> as a Software Engineer.
+           I am now working at <a href="https://www.fin3.tech/"> Fin3</a> as a Software Engineer.
         
         </p>
 
