@@ -58,7 +58,7 @@ class AboutMe extends React.Component {
         </p>
 
         <p> My interests center around AI, ML and blockchain technologies. You can find some of the projects I have 
-          worked on on my <a href="https://github.com/adriatic1517"> Github</a>. 
+          worked on on my <a href="https://github.com/adriatic1517/adriatic1517"> Github</a>. 
         </p>
 
         <p>I look forward to connecting with you!</p>
