@@ -50,22 +50,17 @@ class AboutMe extends React.Component {
         
         <p className="hello">Hello &#128075;</p>
         
-        <p>
-          
-           I recently graduated from UC Berkeley with a Bachelors in Political Economy & Data Science. 
-           I am now working at <a href="https://www.fin3.tech/"> Fin3</a> as a Software Engineer.
-        
-        </p>
 
-        <p> My interests center around AI, ML and blockchain technologies. You can find some of the projects I have 
-          worked on on my <a href="https://github.com/adriatic1517/adriatic1517"> Github</a>. 
-        </p>
+        <p> 
+          I am interested in AI, ML and blockchain technologies. I studied Political Economy & Data Science during my undergraduate at UC Berkeley and work as a Software Engineer now.</p>
 
-        <p>I look forward to connecting with you!</p>
+
         <p className= "Links">
            <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
            <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn </a> |
+           <a href="/blog/index.html"> GitHub</a> |
            <a href="/blog/index.html"> Blog</a>
+          
             </p>
         
 
