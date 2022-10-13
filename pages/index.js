@@ -49,20 +49,20 @@ class AboutMe extends React.Component {
     return (
       <div className={styles.AboutMe} id = "About Me">
         
-        <p className="hello">Hello &#128075;</p>
+        <p className={styles.hello}>Hello &#128075;</p>
         
 
         <p> 
           I am interested in AI, ML and blockchain technologies. I studied Political Economy & Data Science during my undergraduate at UC Berkeley and work as a Software Engineer now.</p>
 
 
-        <p className= "Links">
+        <div className={styles.Links}>
            <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
            <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/"> LinkedIn </a> |
-           <a href="/blog/index.html"> GitHub</a> |
+           <a href="https://www.github.com/adriatic1517"> GitHub</a> |
            <a href="/blog"> Blog</a>
           
-            </p>
+            </div>
         
 
 

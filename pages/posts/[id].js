@@ -19,8 +19,13 @@ export default function Post({postData}) {
         <title>{postData.title}</title>
       </Head>
       <div className={styles.bg_image}>
+
       <Image  src={postData.bg_image} layout='fill'/>
+
       </div>
+      <p className={styles.caption}><i> A picture of thre of the va
+                Very famous ye syeslley of something in KPK.
+            </i></p>
       <div className={styles.blog_content}>
       <BlogComponent component_name= {postData.component_name} />
       </div>

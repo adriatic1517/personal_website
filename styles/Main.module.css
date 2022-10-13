@@ -11,9 +11,7 @@
     grid-template-columns: repeat(10, 1fr);
   }
   
-  .a {
-    text-decoration: none;
-  }
+
   
   .hello {
     text-align: center;
@@ -22,9 +20,14 @@
   }
   
   .Links {
-    text-align:center;
+    text-align: center;
     margin-right: 30px;
     margin-top:0;
+    color:blue;
+  }
+
+  .Links > a {
+    color: blue;
   }
   
   .Portrait {
