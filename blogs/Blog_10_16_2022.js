@@ -12,11 +12,11 @@ function Blog_10_16_2022() {
           In the name of God, the Most Gracious, the Most Merciful
         </p>
         <p>
-          Ever since graduation I haven't written that much and this blog is a
+          Ever since graduation I haven't been writing that much and this blog is
           meant to remedy that. I am not sure exactly what I'll write about but
-          I'll try my best to keep it interesting. Towards that endeavor, the
-          background image will help to lay out the imagery for the content that follows. You can think of it as the
-          blog's <i>shakal</i>:{" "}
+          I'll try my best to keep it interesting. Towards that goal, the
+          background image will help lay out the imagery for the content. People like to call it a background image 
+          but I'll call it my blog's <i>shakal</i>:{" "}
         </p>
         <blockquote cite="https://oart.eu/melody">
           When playing a piece of instrumental music on the rubab it is
@@ -51,29 +51,34 @@ function Blog_10_16_2022() {
           back from Swat Valley through the Malakand mountains, a few miles to the
           west. Besides their scenic beauty, the passes are famous for the historical
           defense the Yousafzai Pashtuns put up against invaders ever since
-          first occupying Swat Valley under Malak Ahmad Khan Yusufzai
+          first occupying Swat Valley in the 16th century under Malak Ahmad Khan Yusufzai
           (1460–1530).
         </p>
 
         <p>
-          I'll briefly narrate one such battle that was mentioned in the caption
+          I'll narrate the battle that was mentioned in the caption
           of this image. In 1586, the famed Mughal Emperor Akbar lost 8000
-          soldiers and the main commander of the Mughal army, Raja Birbal, at
+          soldiers and the main commander of the Mughal army, <a href="https://en.wikipedia.org/wiki/Birbal">Raja Birbal</a>, at
           the Karakar Pass in an attempt to subdue the Yousafzai Pashtuns.{" "}
         </p>
 
         <blockquote>
+       
           The Mughal army forced the submission of many Yusufzai chiefs in Swat
           and Bajaur. But a relief force on its way to Swat through the
-          difficult mountain terrain met disaster. Split command between a royal
-          favorite, Raja Bir Bar, the court wit, and Zain Khan Koka, an ordinary
+          difficult mountain terrain met disaster. 
+          
+          <p>Split command between a royal
+          favorite, Raja Bir Bar*, the court wit, and Zain Khan Koka, an ordinary
           field general, weakened the usually careful deployment of Akbar's
-          armies. A reckless attack on the Yusufzais exposed the royal army to
+          armies. </p>
+         A reckless attack on the Yusufzais exposed the royal army to
           ambush in the mountain passes. About 8,000 imperial soldiers,
           including Raja Bir Bar, were killed in the greatest disaster to Mughal
           arms in Akbar's reign.
-        </blockquote>
 
+          
+        </blockquote>
         <p className="source">
           <a
             href="https://www.google.com/books/edition/The_Mughal_Empire/HHyVh29gy4QC?hl=en&gbpv=1&pg=PA50&printsec=frontcover"
@@ -82,10 +87,12 @@ function Blog_10_16_2022() {
             - The Mughal Empire. Gordan & Richards, 1993.
           </a>
         </p>
+        <p>*incorrectly transliterated as "Bir Bar" by <a href="https://en.wikipedia.org/wiki/John_F._Richards">a Duke professor</a></p>
+
 
         <p>
           The pass was subsequently visited by the British during their colonial
-          campaigns. Winston Churchill, the bigot, writes of the British troops
+          campaigns. Winston Churchill, the forerunner among advocates for racial equality, writes (with bigotry omitted) of the British troops
           upon reaching Mingora:{" "}
         </p>
         <blockquote>
@@ -129,10 +136,9 @@ function Blog_10_16_2022() {
           >
             mass exodus of the sizeable local Hindu population
           </a>
-          . I remember my grandmother narrating how their Hindu neighborsleft
+          . I remember my grandmother narrating how their Hindu neighbors left
           behind all their belongings and buried their jewellery, never to
-          return to get them (similar to rest of the subcontinent, most of
-          everything was looted anyway).
+          return to get them (most of everything left behind was looted in the aftermath of the partition, <a href="https://en.wikipedia.org/wiki/Train_to_Pakistan">here</a>'s a great novel on the Partition that was assigned for one of my courses).
         </p>
 
         <p>
@@ -153,7 +159,7 @@ function Blog_10_16_2022() {
 
         <p>
           {" "}
-          Finally, as gratitude to my alma mater for helping illuminate most of
+          Finally, as gratitude to my friends and alma mater for helping illuminate most of
           the topics I'll discuss in this blog, I'll end this welcome with UC
           Berkeley's motto:{" "}
         </p>
@@ -294,8 +300,9 @@ function Blog_10_16_2022() {
     }
     .translation {
         text-align:center;
-      
-        font-size: 1.5vh;
+        color: rgb(107, 107, 107);
+
+        font-size: 1.6vh;
         margin-bottom:5vh;
         margin-top:-2vh;
     }
