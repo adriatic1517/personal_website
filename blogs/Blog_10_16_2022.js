@@ -286,16 +286,15 @@ function Blog_10_16_2022() {
     .kufi {
         font-family: 'Noto Naskh Arabic', sans-serif;
         font-size: 3.5vh;
-        padding-top:3vh;
-        padding-bottom:3vh;
+        margin-top:3vh;
+        margin-bottom:3vh;
         padding-right:3vw;
         text-align:center;
         font-weight:600;
     }
     .translation {
         text-align:center;
-        padding-right:4vw;
-        padding-left:5vw;
+      
         font-size: 1.5vh;
         margin-bottom:5vh;
         margin-top:-2vh;
