@@ -48,8 +48,8 @@ function Blog_10_16_2022() {
 
         <p>
           The particular picture above image reminds me of the drive on the way
-          back from Swat Valley through the Malakand, another pass a few miles
-          west. Besides scenic beauty, the passes are famous for the historical
+          back from Swat Valley through the Malakand mountains, a few miles to the
+          west. Besides their scenic beauty, the passes are famous for the historical
           defense the Yousafzai Pashtuns put up against invaders ever since
           first occupying Swat Valley under Malak Ahmad Khan Yusufzai
           (1460–1530).
@@ -286,8 +286,8 @@ function Blog_10_16_2022() {
     .kufi {
         font-family: 'Noto Naskh Arabic', sans-serif;
         font-size: 3.5vh;
-        margin-top:3vh;
-        margin-bottom:3vh;
+        padding-top:3vh;
+        padding-bottom:3vh;
         padding-right:3vw;
         text-align:center;
         font-weight:600;
