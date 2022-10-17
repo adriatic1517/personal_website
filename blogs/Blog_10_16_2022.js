@@ -257,10 +257,9 @@ function Blog_10_16_2022() {
             text-decoration: none; /* no underline */
           }
     
-
     .translation {
         text-align:center;
-        font-size: 1.75vh;
+        font-size: 1.2vh;
         margin-bottom:5vh;
         margin-top:-2vh;
     }
@@ -299,6 +298,13 @@ function Blog_10_16_2022() {
         margin-bottom:3vh;
         margin-top:-2vh;
     }
+
+    .kufi > a {
+      color: black;
+      text-decoration: none; /* no underline */
+    }
+
+
 
     blockquote {
         background: #f9f9f9;
