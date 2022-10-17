@@ -246,7 +246,7 @@ function Blog_10_16_2022() {
 
     .kufi {
         font-family: 'Noto Naskh Arabic', sans-serif;
-        font-size: 3vh;
+        font-size: 3.5vh;
         margin-top:5vh;
         text-align:center;
         font-weight:400;
@@ -259,9 +259,11 @@ function Blog_10_16_2022() {
     
     .translation {
         text-align:center;
-        font-size: 1.2vh;
+        font-size: 1.75vh;
         margin-bottom:5vh;
         margin-top:-2vh;
+        color: rgb(107, 107, 107);
+      
     }
 
     .Post {
@@ -292,10 +294,10 @@ function Blog_10_16_2022() {
     }
     .translation {
         text-align:center;
-        padding-right:5vw;
+        padding-right:4vw;
         padding-left:5vw;
-        font-size: 1.75vh;
-        margin-bottom:3vh;
+        font-size: 1.5vh;
+        margin-bottom:5vh;
         margin-top:-2vh;
     }
 
