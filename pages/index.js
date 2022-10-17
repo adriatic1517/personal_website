@@ -53,7 +53,7 @@ class AboutMe extends React.Component {
         
 
         <p> 
-          I am like in technology and politics. During my undergraduate at UC Berkeley I studied Political Economy & Data Science. I now work as a Software Engineer.</p>
+          I like technology and politics. During my undergraduate at UC Berkeley I studied Political Economy & Data Science. I now work as a Software Engineer.</p>
 
 
         <div className={styles.Links}>
