@@ -242,6 +242,8 @@ function Blog_10_16_2022() {
           
             
 @media (min-width: 700px) {
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');            
+
     .kufi {
         font-family: 'Noto Naskh Arabic', sans-serif;
         font-size: 4vh;
