@@ -246,7 +246,7 @@ function Blog_10_16_2022() {
 
     .kufi {
         font-family: 'Noto Naskh Arabic', sans-serif;
-        font-size: 4vh;
+        font-size: 3vh;
         margin-top:5vh;
         text-align:center;
         font-weight:400;
@@ -260,7 +260,7 @@ function Blog_10_16_2022() {
 
     .translation {
         text-align:center;
-        font-size: 2vh;
+        font-size: 1.75vh;
         margin-bottom:5vh;
         margin-top:-2vh;
     }
