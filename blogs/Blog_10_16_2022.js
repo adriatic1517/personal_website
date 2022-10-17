@@ -176,8 +176,8 @@ function Blog_10_16_2022() {
       </div>
 
       <style jsx>{`
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');            
         .fiatLux {
             text-align:center;
             margin-top:4vh;
