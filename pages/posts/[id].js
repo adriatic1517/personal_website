@@ -3,13 +3,13 @@ import Blog from '../../components/blog';
 import Image from 'next/image';
 import styles from '../../styles/Blog.module.css';
 import {Blog_10_6_2022} from '../../blogs';
-import {Blog_10_9_2022} from '../../blogs';
+import {Blog_10_16_2022} from '../../blogs';
 
 
 
 const Blogs = {
   Blog_10_6_2022,
-  Blog_10_9_2022
+  Blog_10_16_2022
 };
 
 
@@ -23,8 +23,7 @@ export default function Post({postData}) {
       <Image  src={postData.bg_image} layout='fill'/>
 
       </div>
-      <p className={styles.caption}><i> A picture of thre of the va
-                Very famous ye syeslley of something in KPK.
+      <p className={styles.caption}><i> {postData.caption}
             </i></p>
       <div className={styles.blog_content}>
       <BlogComponent component_name= {postData.component_name} />

@@ -73,8 +73,8 @@ function BlogPost(props) {
 function PostDetails(props) {
   return (
     <div className={styles.PostDetails}>
-      <h1> {props.title.slice(0, 50)} </h1>
-      <p>{props.date}</p> 
+      <h1 className={styles.postTitle}> {props.title.slice(0, 50)} </h1>
+      <p className={styles.postDate}>{props.date}</p> 
     </div>
 
   )

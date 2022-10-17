@@ -37,16 +37,25 @@
   bottom: 0;
   left: 0;
   color:white;
-  background-color: rgba(95, 92, 92, 0.5);
+  background-color: rgba(45, 45, 45, 0.7);
   width: 95%;
   padding-left:5%;
-  height:15vh;
+  height:11vh;
 
   overflow:hidden;
 }
-.PostDetails > h1 {
+.postTitle {
   font-size: 3vh;
+  color:white;
+  font-weight:600;
+  margin-bottom: -1vh;
 
+
+}
+.postDate {
+  font-weight: 400;
+font-size:16px;
+margin-left:0.25vw;
 }
 
 .Blogs {
