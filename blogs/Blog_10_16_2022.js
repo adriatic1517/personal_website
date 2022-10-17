@@ -14,8 +14,8 @@ function Blog_10_16_2022() {
         <p>
           Ever since graduation I haven't been writing that much and this blog is
           meant to remedy that. I am not sure exactly what I'll write about but
-          I'll try my best to keep it interesting. Towards that goal, the
-          background image will help lay out the imagery for the content. People like to call it a background image 
+          I'll try my best to keep it interesting. Towards that goal, the 
+          image in the background will help lay out the imagery for the content. People like to call it a background image 
           but I'll call it my blog's <i>shakal</i>:{" "}
         </p>
         <blockquote cite="https://oart.eu/melody">
@@ -47,18 +47,18 @@ function Blog_10_16_2022() {
         </p>
 
         <p>
-          The particular picture above image reminds me of the drive on the way
+          The particular picture image above reminds me of the drive on the way
           back from Swat Valley through the Malakand mountains, a few miles to the
           west of the Karakar Pass. Besides their scenic beauty, the passes are famous for their infallible
           defense by the Yousafzai Pashtuns, the inhabitants of the valley since
-          the 16th century when they first conquered the Valley under Malak Ahmad Khan Yusufzai, 
+          the 16th century when they first conquered it under Malak Ahmad Khan Yusufzai, 
           (1460–1530).
         </p>
 
         <p>
           I'll narrate the battle that was mentioned in the caption
           of this image. In 1586, the famed Mughal Emperor Akbar lost 8000
-          soldiers and the main commander of the Mughal army, <a href="https://en.wikipedia.org/wiki/Birbal">Raja Birbal</a>, at
+          soldiers and the main commander of the Mughal army, <a target="_blank" href="https://en.wikipedia.org/wiki/Birbal">Raja Birbal</a>, at
           the Karakar Pass in an attempt to subdue the Yousafzai Pashtuns.{" "}
         </p>
 
@@ -92,7 +92,7 @@ function Blog_10_16_2022() {
 
         <p>
           The pass was subsequently visited by the British during their colonial
-          campaigns. Winston Churchill, the forerunner among advocates for racial equality, writes (with bigotry omitted) of the British troops
+          campaigns. Winston Churchill, the finest Brit, some would say, writes (with bigotry omitted) of the British troops
           upon reaching Mingora:{" "}
         </p>
         <blockquote>
@@ -138,7 +138,7 @@ function Blog_10_16_2022() {
           </a>
           . I remember my grandmother narrating how their Hindu neighbors left
           behind all their belongings and buried their jewellery, never to
-          return to get them (most of everything left behind was looted in the aftermath of the partition, <a href="https://en.wikipedia.org/wiki/Train_to_Pakistan">here</a>'s a great novel on the Partition that was assigned for one of my courses).
+          return to get them (most of everything left behind was looted in the aftermath of the partition, <a target="_blank" href="https://en.wikipedia.org/wiki/Train_to_Pakistan">here</a>'s a great novel on the Partition that was assigned for one of my courses).
         </p>
 
         <p>
