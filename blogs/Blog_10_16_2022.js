@@ -199,7 +199,7 @@ function Blog_10_16_2022() {
             .signature {
                 text-align:right;
 
-                margin-top: 10vh;
+                margin-top: 5vh;
 
                 font-size:2.5vh;
                 color: rgb(0, 0, 0, 0.9);
