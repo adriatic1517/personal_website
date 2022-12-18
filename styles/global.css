@@ -1,15 +1,29 @@
 html,
 body {
   padding: 0;
-  
-  background-color:black;
 
   margin: 0;
-  font-family: -apple-system, BaskervaldADFStd, Georgia,serif,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: -apple-system, BaskervaldADFStd, Georgia, serif, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Independent";
+  src: local("Independent"),
+    url(/fonts/Independent/independent-*.woff) format("woff");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
 
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: local("Noto Kufi Arabic"),
+    url(/fonts/Noto_Kufi_Arabic/NotoKufiArabic-VariableFont_wght.ttf)
+      format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
