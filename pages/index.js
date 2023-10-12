@@ -44,6 +44,8 @@ class AboutMe extends React.Component {
           Political Economy & Data Science. I now work as a Software Engineer.
         </p>
 
+        <p><a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit">CS Resources Collection</a></p>
+
         <div className={styles.Links}>
           <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
           <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/">
