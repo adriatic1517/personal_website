@@ -41,7 +41,7 @@ class AboutMe extends React.Component {
 
         <p>
           I like technology and politics. During my undergraduate I studied
-          Political Economy & Data Science. I now work as a Software Engineer.
+          Political Economy & Data Science. I now work as a Software Engineer at Flexport.
         </p>
 
         <p> You might be looking for: 
