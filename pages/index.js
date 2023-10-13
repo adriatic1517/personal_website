@@ -60,7 +60,7 @@ class AboutMe extends React.Component {
           </a>{" "}
           |<a href="https://www.github.com/adriatic1517"> GitHub</a> |
           <a href="/blog"> Blog</a> |
-          <a href="https://open.spotify.com/user/11181607818?si=88741387cd704eb7">Spotify</a>
+          <a href="https://open.spotify.com/user/11181607818?si=88741387cd704eb7"> Spotify</a>
         </div>
       </div>
     );
