@@ -41,13 +41,13 @@ class AboutMe extends React.Component {
 
         <p>
           I like technology and politics. During my undergraduate I studied
-          Political Economy & Data Science. I now work as a Software Engineer at Flexport.
+          Political Economy & Data Science. I now work as a Software Engineer (actively looking!).
         </p>
 
         <p> You might be looking for: 
           <ul>
             <li>
-            <a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit">Compilation of CS Resources</a>
+                <a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit">Compilation of CS Resources</a>
             </li>
           </ul>
           </p>
@@ -59,8 +59,7 @@ class AboutMe extends React.Component {
             LinkedIn{" "}
           </a>{" "}
           |<a href="https://www.github.com/adriatic1517"> GitHub</a> |
-          <a href="/blog"> Blog</a> |
-          <a href="https://open.spotify.com/user/11181607818?si=88741387cd704eb7"> Spotify</a>
+          <a href="/blog"> Blog</a> 
         </div>
       </div>
     );

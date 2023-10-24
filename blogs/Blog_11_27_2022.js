@@ -14,8 +14,35 @@ function Blog_11_27_2022(props) {
       <div className="Content">
         <h1 className="Heading">Color</h1>
         <p>
-          Recently, I have been reading My Name is Red by Orhan Pamuk. The novel narrates a story about miniaturists in service of the Ottoman Sultan in Istanbul in 1591. I actually found the painting above before reading the novel.
+          Recently, I read the novel My Name is Red by Orhan Pamuk. 
+          The novel narrates a story about miniaturists in service of the Ottoman Sultan in Istanbul in 1591.
+          I actually found the painting above before reading the novel and was amused to see it referenced in the novel. Anyway, I thought this quote was quite interesting and wanted to share it:
+          </p> 
+          <blockquote>
+            
+          “Only a weak and hesitant miniaturist would use a variety of red tones to depict the red of a caftan, they claimed shadows were not an excuse. Besides, we believe in only one red.
+
+<p>“What is the meaning of red?” the blind miniaturist who’d drawn the horse from memory asked again.</p>
+
+<p>“The meaning of color is that it is there before us and we see it,” said the other. “Red cannot be explained to he who cannot see.”</p>
+
+<p>“To deny God’s existence, victims of Satan maintain that God is not visible to us,” said the blind miniaturist who’d rendered the horse.</p>
+
+<p>“Yet, He appears to those who can see,” said the other master. “It is for this reason that the Koran states that the blind and the seeing are not equal.”</p>
+
+        </blockquote>
+        <p className="source">
+          <a
+            href="https://en.wikipedia.org/wiki/My_Name_Is_Red"
+            target="_blank"
+          >
+            - My Name is Red, Orhan Pamuk 1998.
+          </a>
         </p>
+
+        
+
+  
       </div>
 
       <style jsx>{`
@@ -91,6 +118,31 @@ function Blog_11_27_2022(props) {
             }
   
           }
+
+          
+        blockquote {
+          background: #f9f9f9;
+          border-left: 8px solid #ccc;
+          margin: 1.5em 10px;
+          padding: 0.5em 10px;
+          font-family: Palatino;
+          font-weight: 400;
+          line-height: 1.2em;
+          background-color: white;
+        }
+        
+
+        blockquote > cite {
+          text-align: right;
+        }
+
+        .source {
+          text-align: right;
+          margin-top: -3vh;
+          margin-right: 5vw;
+          margin-bottom: 4vh;
+          font-size: 0.9rem;
+        }
 
 
        
