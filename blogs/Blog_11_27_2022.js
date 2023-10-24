@@ -13,7 +13,7 @@ function Blog_11_27_2022(props) {
             href="https://www.metmuseum.org/art/collection/search/446603"
             target="_blank"
           >
-            The Met, New York
+            The Met
           </a>)
       </p>
       
