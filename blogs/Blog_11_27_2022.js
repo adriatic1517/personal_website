@@ -26,7 +26,7 @@ function Blog_11_27_2022(props) {
           </p> 
           <blockquote>
             
-          “Only a weak and hesitant miniaturist would use a variety of red tones to depict the red of a caftan, they claimed shadows were not an excuse. Besides, we believe in only one red.
+          Only a weak and hesitant miniaturist would use a variety of red tones to depict the red of a caftan, they claimed shadows were not an excuse. Besides, we believe in only one red.
 
 <p>“What is the meaning of red?” the blind miniaturist who’d drawn the horse from memory asked again.</p>
 
@@ -133,7 +133,7 @@ function Blog_11_27_2022(props) {
           padding: 0.5em 10px;
           font-family: Palatino;
           font-weight: 400;
-          line-height: 1.2em;
+          line-height: 1.4em;
           background-color: white;
         }
         
