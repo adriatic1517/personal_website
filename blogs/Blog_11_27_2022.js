@@ -52,7 +52,7 @@ function Blog_11_27_2022(props) {
       </div>
 
       <style jsx>{`
-         
+           @media (min-width: 700px) {
 
 .Post {
   display:grid;
@@ -123,7 +123,7 @@ function Blog_11_27_2022(props) {
               padding-right: 7vw;
             }
   
-        
+          }
 
           
         blockquote {
@@ -148,6 +148,10 @@ function Blog_11_27_2022(props) {
           margin-right: 5vw;
           margin-bottom: 4vh;
           font-size: 0.9rem;
+        }
+
+        .caption {
+            margin-top: 3vh;
         }
 
 
