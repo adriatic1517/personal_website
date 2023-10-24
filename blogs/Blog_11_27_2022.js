@@ -7,7 +7,7 @@ function Blog_11_27_2022(props) {
         <Image src={props.postData.bg_image} width="2298" height="3722" />
       </div>
 
-      <p className="caption">
+      <p className="Caption">
         <i> "Laila and Majnun in School", Folio 129 from a Khamsa (Quintet) of Nizami of Ganja
 </i>. (<a
             href="https://www.metmuseum.org/art/collection/search/446603"
@@ -62,11 +62,10 @@ function Blog_11_27_2022(props) {
 }
 
 .Content {
-
   grid-column: 2/2;
   grid-row:3/3;
-
 }
+
     .Background {
        
       position:relative;
@@ -78,7 +77,7 @@ function Blog_11_27_2022(props) {
 
   }
 
-  .caption {
+  .Caption {
     grid-row:2/2;
   }
 
@@ -86,14 +85,14 @@ function Blog_11_27_2022(props) {
             font-size:3.5vh;
            }
 
-          }
+    }
 
 
 
-          @media (max-width: 700px) {
+          @media (max-width: 720px) {
             .Post {
               display: grid;
-              grid-template-rows: 75vh 6vh auto;
+              grid-template-rows: auto;
               grid-template-columns: 100vw;
               margin-bottom: 10vh;
               line-height: 1.6;
@@ -111,9 +110,9 @@ function Blog_11_27_2022(props) {
   
             .Caption {
               grid-row: 2/2;
-              padding-left: 6vw;
-              padding-right: 7vw;
-              font-size: 1.75vh;
+              padding-left: 5vw;
+              padding-right: 5vw;
+              font-size: 16px;
             }
   
             .Content {
@@ -150,9 +149,7 @@ function Blog_11_27_2022(props) {
           font-size: 0.9rem;
         }
 
-        .caption {
-            margin-top: 3vh;
-        }
+        
 
 
        
