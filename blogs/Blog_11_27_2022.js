@@ -9,8 +9,14 @@ function Blog_11_27_2022(props) {
 
       <p className="caption">
         <i> "Laila and Majnun in School", Folio 129 from a Khamsa (Quintet) of Nizami of Ganja
-</i>
+</i>. (<a
+            href="https://www.metmuseum.org/art/collection/search/446603"
+            target="_blank"
+          >
+            The Met, New York
+          </a>)
       </p>
+      
       <div className="Content">
         <h1 className="Heading">Color</h1>
         <p>
