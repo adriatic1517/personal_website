@@ -44,14 +44,6 @@ class AboutMe extends React.Component {
           Political Economy & Data Science. I now work as a Software Engineer (actively looking!).
         </p>
 
-        <p> You might be looking for: 
-          <ul>
-            <li>
-                <a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit">Compilation of CS Resources</a>
-            </li>
-          </ul>
-          </p>
-
         <div className={styles.Links}>
           <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
           <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/">
@@ -59,6 +51,7 @@ class AboutMe extends React.Component {
             LinkedIn{" "}
           </a>{" "}
           |<a href="https://www.github.com/adriatic1517"> GitHub</a> |
+          |<a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit"> CS Resources</a> |
           <a href="/blog"> Blog</a> 
         </div>
       </div>
