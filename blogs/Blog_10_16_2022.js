@@ -180,25 +180,6 @@ function Blog_10_16_2022(props) {
           of the things that I find interesting.
         </p>
 
-        <p>
-          {" "}
-          Finally, as gratitude to my friends and alma mater for helping
-          illuminate most of the topics I'll discuss in this blog, I'll end this
-          welcome with UC Berkeley's motto:{" "}
-        </p>
-
-        <p className="fiatLux">
-          {" "}
-          <i>
-            {" "}
-            <a
-              href="https://en.wikipedia.org/wiki/Let_there_be_light#:~:text=dixitque%20Deus%20fiat%20lux%20et%20facta%20est%20lux"
-              target="_blank"
-            >
-              Fiat Lux
-            </a>
-          </i>
-        </p>
 
         <p className="signature"> Emad Siddiq</p>
         <p className="date">16th October 2022</p>

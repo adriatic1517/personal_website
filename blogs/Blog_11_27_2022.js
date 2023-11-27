@@ -59,6 +59,7 @@ function Blog_11_27_2022(props) {
   grid-template-rows: auto 4vh auto;
   grid-template-columns: 25vw 50vw 30vw;
   margin-bottom:10vh;
+  line-height: 1.6;
 }
 
 .Content {
