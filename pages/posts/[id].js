@@ -5,12 +5,14 @@ import { Blog_10_6_2022 } from "../../blogs";
 import { Blog_10_16_2022 } from "../../blogs";
 import { Blog_11_27_2022 } from "../../blogs";
 import { Blog_11_27_2023 } from "../../blogs";
+import { Blog_12_12_2023 } from "../../blogs";
 
 const Blogs = {
   Blog_10_6_2022,
   Blog_10_16_2022,
   Blog_11_27_2022,
-  Blog_11_27_2023
+  Blog_11_27_2023,
+  Blog_12_12_2023
 };
 
 export default function Post({ postData }) {
