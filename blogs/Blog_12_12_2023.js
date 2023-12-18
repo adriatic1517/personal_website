@@ -26,21 +26,41 @@ function Blog_12_12_2023(props) {
       <div className="Content">
         <h1 className="Heading">Sign up</h1>
         <p>
-          How does User Sign up work?
+         The question of parsing a url.         The question of parsing a url.
+         The question of parsing a url.
+         The question of parsing a url.
+         The question of parsing a url.
+
         </p>
         <pre>
         <code className="language-typescript">const variable = 'raw';</code>
+      </pre>
+
+      <pre>
+        <code className="display-linebreak overflow-x-auto text-slate-100 language-python">
+          { 
+`def new_function():
+  on_a = 20 \n` }
+          </code>
       </pre>
   
       </div>
 
       <style jsx>{`
+
+
+.display-linebreak {
+  white-space: pre;
+}
            @media (min-width: 700px) {
+            .display-linebreak {
+              white-space: pre;
+            }
 
 .Post {
   display:grid;
   grid-template-rows: auto 4vh auto;
-  grid-template-columns: 25vw 50vw 30vw;
+  grid-template-columns: 20vw 60vw 25vw;
   margin-bottom:10vh;
   line-height: 1.6;
 }
@@ -48,21 +68,23 @@ function Blog_12_12_2023(props) {
 .Content {
   grid-column: 2/2;
   grid-row:3/3;
+  margin: 0% 5vw 0% 5vw;
 }
 
     .Background {
-       
       position:relative;
       grid-row:1/1;
-      grid-column: 1/4;
-      width:100vw;
+      grid-column: 2/3;
+      width:100%;
       overflow:hidden;
+      margin-top:5%;
       
-
   }
 
   .Caption {
     grid-row:2/2;
+    grid-column: 2/3;
+
     margin-left:10px;
   }
 
@@ -88,6 +110,7 @@ function Blog_12_12_2023(props) {
               position: relative;
               grid-row: 1/1;
               grid-column: 1/1;
+
               height: 100%;
               width: 100%;
               margin-left: 10

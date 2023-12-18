@@ -25,8 +25,7 @@ function Blog_10_16_2022(props) {
           is meant to remedy that. I am not sure exactly what I'll write about
           but I'll try my best to keep it interesting. Towards that goal, the
           image in the background will help lay out the imagery for the content.
-          People like to call it a background image but I'll call it my blog's{" "}
-          <i>shakal</i>:{" "}
+         {" "}
         </p>
         <blockquote cite="https://oart.eu/melody">
           When playing a piece of instrumental music on the rubab it is
@@ -97,16 +96,11 @@ function Blog_10_16_2022(props) {
             - The Mughal Empire. Gordan & Richards, 1993.
           </a>
         </p>
-        <p>
-          *incorrectly transliterated as "Bir Bar" by{" "}
-          <a href="https://en.wikipedia.org/wiki/John_F._Richards">
-            a Duke professor
-          </a>
-        </p>
+        
 
         <p>
           The pass was subsequently visited by the British during their colonial
-          campaigns. Winston Churchill, the finest Brit, some would say, writes
+          campaigns. Winston Churchill, writes
           (with bigotry omitted) of the British troops upon reaching Mingora:{" "}
         </p>
         <blockquote>
@@ -150,10 +144,7 @@ function Blog_10_16_2022(props) {
           >
             mass exodus of the sizeable local Hindu population
           </a>
-          . I remember my grandmother narrating how their Hindu neighbors left
-          behind all their belongings and buried their jewellery, never to
-          return to get them (most of everything left behind was looted in the
-          aftermath of the partition,{" "}
+          
           <a
             target="_blank"
             href="https://en.wikipedia.org/wiki/Train_to_Pakistan"
@@ -171,17 +162,7 @@ function Blog_10_16_2022(props) {
           operations against the TTP.
         </p>
 
-        <p>
-          {" "}
-          I'll leave it to you to dig deeper into the history of the Yusufzai
-          but I hope images like these can set the back drop for our
-          conversation. Besides this innovation, there won't be any strict
-          format or theme. I'll be very happy if I end up sharing with you some
-          of the things that I find interesting.
-        </p>
 
-
-        <p className="signature"> Emad Siddiq</p>
         <p className="date">16th October 2022</p>
       </div>
 
