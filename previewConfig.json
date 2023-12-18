@@ -1,0 +1,9 @@
+{
+  "Blog_11_27_2023": [
+    {
+      "propName": "src",
+      "propType": "string",
+      "defaultValue": "\"color.jpg\""
+    }
+  ]
+}

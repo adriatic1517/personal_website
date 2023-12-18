@@ -55,7 +55,6 @@ function Title() {
   );
 }
 
-//
 
 function BlogPost(props) {
   return (
