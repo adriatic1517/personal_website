@@ -8,10 +8,20 @@ export default function Post(props) {
   
           <div className="Content">
             <h1 className="Heading">{props.heading}</h1>
+            <p className="Date">{props.date} - Emad Siddiq</p>
+
+            
+
             {props.children}
           </div>
   
         <style jsx>{`
+
+        .Date {
+            margin-top:-3%;
+            font-size:14px;
+            color: rgba(0, 0, 0, 0.5);
+        }
              @media (min-width: 700px) {
   
               .Post {

@@ -14,9 +14,15 @@ export default function Code(props) {
 
 <style jsx> 
 {
-    `.display-linebreak {
+    `
+    code {
+      padding:5% 5% 0 0;
+      background-color:rgb(0, 0, 0, 0.03);
+    }
+    .display-linebreak {
         white-space: pre;
       }`
+      
 }
 </style> 
         </pre>
