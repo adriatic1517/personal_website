@@ -7,7 +7,7 @@
   background-color: white;
   color: #333333;
   display: grid;
-  grid-template-rows: 100px 150px 75px 500px;
+  grid-template-rows: 100px 150px 75px 500px auto;
   grid-template-columns: repeat(10, 1fr);
 }
 
@@ -55,20 +55,16 @@
   margin-left: 110px;
 }
 
-.Coursework {
-  grid-row: 5/5;
+.Blogs {
+  grid-row: 5/6;
   grid-column: 2/7;
 }
 
-.Projects {
-  grid-row: 6/6;
-  grid-column: 2/7;
-}
 
 @media screen and (max-width: 1000px) {
   .Portfolio {
     display: grid;
-    grid-template-rows: 100px 100px 75px 500px 100px;
+    grid-template-rows: 100px 100px 75px 500px auto;
     grid-template-columns: 8vw 84vw 8vw;
   }
 
@@ -79,8 +75,22 @@
 
   .Portrait {
     grid-column: 2/2;
+
   }
 
+  .AboutMe {
+    grid-row: 3/3;
+
+    grid-column: 2/2;
+    margin: initial;
+    font-size: 16px;
+  }
+
+  .Blogs {
+    grid-row: 5/5;
+    grid-column: 2/7;
+  }
+  
   .Portrait > img {
     width: 100px;
     height: 100px;
@@ -90,11 +100,7 @@
     margin-right: auto;
   }
 
-  .AboutMe {
-    grid-column: 2/2;
-    margin: initial;
-    font-size: 16px;
-  }
+
 
   .Name {
     grid-column: 2/2;

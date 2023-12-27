@@ -23,7 +23,9 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <Title />
+      <AboutMe/>
       <Blogs allPostsData={allPostsData} />
     </div>
   );
@@ -54,6 +56,31 @@ function Title() {
     </div>
   );
 }
+
+function AboutMe() {
+    return (
+      <div className={styles.AboutMe} id="About Me">
+        <p className={styles.hello}>Hello &#128075;</p>
+
+        <p>
+          I like technology and politics. During my undergraduate I studied
+          Political Economy & Data Science. I now work as a Software Engineer (actively looking!).
+        </p>
+
+        <div className={styles.Links}>
+          <a href="Emad_Siddiq_Resume.pdf">Resume</a> |
+          <a href="https://www.linkedin.com/in/emad-siddiq-2b9979164/">
+            {" "}
+            LinkedIn{" "}
+          </a>{" "}
+          |<a href="https://www.github.com/adriatic1517"> GitHub</a> 
+          |<a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit"> CS Resources</a>
+          
+        </div>
+      </div>
+    );
+  }
+
 
 
 function BlogPost(props) {

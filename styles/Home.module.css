@@ -66,6 +66,15 @@
     height: 45vh;
     margin-bottom: 5vh;
   }
+
+  .AboutMe {
+    grid-row: 3/3;
+
+    grid-column: 2/2;
+    margin: initial;
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 700px) {
