@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Main.module.css";
-import Home from "./blog"
+
+import BlogPost from "../components/homepage/blogpost"
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
@@ -12,17 +13,17 @@ export async function getStaticProps() {
   };
 }
 
-
 export default function App({allPostsData}) {
     return (
-      <div>
+      <div className={styles.Home}>
       <div className={styles.Portfolio}>
         <Portrait />
         <Name />
-        <AboutMe />
-      </div>
-      <Home className={styles.Blogs} allPostsData={allPostsData}/>
+        <AboutMe /> 
 
+      </div>
+      <h1 className={styles.BlogHeading}>Blogs</h1>
+      <Blogs allPostsData={allPostsData} />
       </div>
     );
   }
@@ -66,9 +67,28 @@ class AboutMe extends React.Component {
           </a>{" "}
           |<a href="https://www.github.com/adriatic1517"> GitHub</a> 
           |<a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit"> CS Resources</a>
-          
+
+
         </div>
       </div>
     );
   }
 }
+
+function Blogs({ allPostsData }) {
+  return (
+    <div className={styles.Blogs}>
+      {allPostsData.map(({ id, date, title, bg_image }) => (
+        <BlogPost
+          css="Blog"
+          title={title}
+          id={id}
+          date={date}
+          key={id}
+          bg_image={bg_image}
+        />
+      ))}
+    </div>
+  );
+}
+
