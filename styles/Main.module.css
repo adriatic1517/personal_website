@@ -1,3 +1,11 @@
+
+@media (min-width: 700px) {
+.Home {
+  display: grid;
+  grid-template-rows: 75vh 10vh auto;
+  grid-template-columns: repeat(10, 1fr);
+}
+
 .Portfolio {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -9,10 +17,30 @@
   grid-row: 1/1;
   grid-column: 2/9;
   display: grid;
-  grid-template-rows: 100px 150px 75px 500px auto;
+  grid-template-rows: 100px 150px 75px 50px auto;
   grid-template-columns: repeat(10, 1fr);
   margin-left: 5%;
   padding-top:10%;
+}
+
+.BlogHeading {
+  grid-row: 2/3;
+  grid-column: 4/9;
+  color: rgb(61, 73, 79);
+  align-items: center;
+text-align: left;
+}
+
+.Blogs {
+  grid-row: 3/4;
+  grid-column: 4/8;
+  padding: 0% 10% 0% 0%; 
+margin-left:-5%;
+margin-right:-15%;
+  height: 80vh;
+  overflow: scroll;
+  background-color: white;
+
 }
 
 .hello {
@@ -24,7 +52,6 @@
 .Links {
   text-align: center;
   margin-right: 30px;
-  margin-top: 0;
   color: blue;
 }
 
@@ -59,29 +86,91 @@
   margin-left: 110px;
 }
 
-.Blogs {
-  grid-row: 3/4;
-  grid-column: 4/8;
-  padding: 0% 10% 0% 0%; 
-margin-left:-5%;
-margin-right:-15%;
-  height: 80vh;
-  overflow: scroll;
+}
+
+@media (max-width: 700px) {
+  .Home {
+    display: grid;
+    grid-template-rows: 70vh 10vh auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Portfolio {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
   background-color: white;
-
-}
-.BlogHeading {
-  grid-row: 2/3;
-  grid-column: 4/9;
-  color: rgb(61, 73, 79);
-  align-items: center;
-text-align: left;
-}
-
-.Home {
+  color: #333333;
+  grid-row: 1/1;
+  grid-column: 1/4;
   display: grid;
-  grid-template-rows: 65vh 10vh auto;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 10vh 20vh 8vh auto;
+  grid-template-columns: 8vw 90vw 2vw;
+   padding-top:10%;
+  }
+
+  .BlogHeading {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    color: rgb(61, 73, 79);
+    align-items: center;
+  text-align: left;
+  }
+
+  .Blogs {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+
+  .hello {
+    text-align: center;
+    margin-right: 25px;
+    font-size: 18px;
+  }
+  
+  .Links {
+    text-align: center;
+    margin-right: 30px;
+    color: blue;
+  }
+  
+  .Links > a {
+    color: blue;
+  }
+  
+  .Portrait {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-items: center;
+    margin-left: 25vw;
+  }
+  
+  .Portrait > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .Name {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    font-weight: 900;
+    text-align: center;
+
+  }
+  
+  .AboutMe {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    font-size: 16px;
+  }
+
 }
+
+
+
+
 
 
