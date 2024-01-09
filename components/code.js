@@ -15,13 +15,33 @@ export default function Code(props) {
 <style jsx> 
 {
     `
-    code {
+
+    @media (min-width: 720px) {
+          code {
       padding:5% 5% 0 0;
       background-color:rgb(0, 0, 0, 0.03);
     }
     .display-linebreak {
         white-space: pre;
-      }`
+      }
+      
+    }
+
+    @media (max-width: 720px) {
+      code {
+  padding:5% 5% 0 0;
+  background-color:rgb(0, 0, 0, 0.03);
+  font-size: 14px;
+}
+.display-linebreak {
+    white-space: pre;
+  }
+  
+
+}
+    
+    `
+
       
 }
 </style> 

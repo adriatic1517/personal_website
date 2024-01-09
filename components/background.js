@@ -26,15 +26,17 @@ export default function Background(props) {
             margin-left: 10
           }
         }
-  
-        .Background {
-          position:relative;
-          grid-row:1/1;
-          grid-column: 2/3;
-          width:100%;
-          overflow:hidden;
-          margin-top:5%;
-      }
+
+        @media (min-width: 720px) {
+          .Background {
+            position: relative;
+            grid-row: 1/1;
+            grid-column: 1/1;
+            height: 100%;
+            width: 100%;
+            margin-left: 10
+          }
+        }
         `
       }
       </style>

@@ -256,13 +256,6 @@ function Blog_10_16_2022(props) {
             font-size: 1.2rem;
           }
 
-          .Background {
-            position: relative;
-            grid-row: 1/1;
-            grid-column: 1/4;
-            height: 100%;
-            width: 100%;
-          }
 
           .Caption {
             grid-row: 2/2;
@@ -287,14 +280,6 @@ function Blog_10_16_2022(props) {
             margin-bottom: 10vh;
             line-height: 1.6;
             font-size: 1.1rem;
-          }
-
-          .Background {
-            position: relative;
-            grid-row: 1/1;
-            grid-column: 1/1;
-            height: 100%;
-            width: 100%;
           }
 
           .Caption {

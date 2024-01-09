@@ -63,15 +63,6 @@ export default function Post(props) {
                 font-size: 1.1rem;
               }
     
-              .Background {
-                position: relative;
-                grid-row: 1/1;
-                grid-column: 1/1;
-                height: 100%;
-                width: 100%;
-                margin-left: 10
-              }
-    
               .Caption {
                 grid-row: 2/2;
                 padding-left: 5vw;

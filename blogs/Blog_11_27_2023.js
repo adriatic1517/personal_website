@@ -39,7 +39,7 @@ function Blog_11_27_2023(props) {
 <p> Followed by:
 <Code className="language-bash">./configure.sh</Code>
          <center>
-         <video autoPlay muted loop style={{ width: '400px', height: '400px', marginTop:'-5%', marginBottom:'-5%', alignContent: 'center'}}>
+         <video autoPlay muted loop style={{ width: '80vw', height: '40vh', marginTop:'-5%', marginBottom:'-5%', alignContent: 'center'}}>
         <source src="/static/blog_11_27_2023/configure.mov" type="video/mp4"/>
       </video></center>       which will set the default configs (see ./configure --help) and generate the build script. 
 </p>
@@ -48,7 +48,7 @@ function Blog_11_27_2023(props) {
 You can also <a href="https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md#running-bitcoin-core">create a conf file and monitor download progress</a> after running bitcoind available at <Code>./src/bitcoind</Code>
 
 <center>
-         <video autoPlay muted loop style={{ width: '500px', height: '500px', marginTop:'-10%', marginBottom:'-10%', alignContent: 'center'}}>
+         <video autoPlay muted loop style={{ width: '100%', height: '40vh', marginTop:'-10%', marginBottom:'-10%', alignContent: 'center'}}>
         <source src="/static/blog_11_27_2023/bitcoind.mov" type="video/mp4"/>
       </video></center> 
 
