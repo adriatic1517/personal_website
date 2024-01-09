@@ -31,7 +31,7 @@ export default function Background(props) {
           .Background {
             position: relative;
             grid-row: 1/1;
-            grid-column: 1/1;
+            grid-column: 2/3;
             height: 100%;
             width: 100%;
             margin-left: 10
