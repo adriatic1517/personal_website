@@ -17,12 +17,18 @@ export default function Post(props) {
   
         <style jsx>{`
 
+        code {
+          color:green;
+        }
+
         .Date {
             margin-top:-3%;
             font-size:14px;
             color: rgba(0, 0, 0, 0.5);
         }
              @media (min-width: 700px) {
+
+
   
               .Post {
                 display:grid;
@@ -31,6 +37,12 @@ export default function Post(props) {
                 margin-bottom:10vh;
                 line-height: 1.6;
               }
+
+
+              .Post > code {
+                font-size: 40px;
+              }
+
   
               .Content {
                 grid-column: 2/2;
@@ -54,6 +66,8 @@ export default function Post(props) {
   
   
             @media (max-width: 720px) {
+              
+        
               .Post {
                 display: grid;
                 grid-template-rows: auto;
@@ -62,6 +76,12 @@ export default function Post(props) {
                 line-height: 1.6;
                 font-size: 1.1rem;
               }
+
+              .Post > code {
+                font-size: 40px;
+              }
+
+        
     
               .Caption {
                 grid-row: 2/2;

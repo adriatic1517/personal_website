@@ -9,8 +9,7 @@ export default function Code(props) {
 
       return (
         <pre>
-            <code className={props.className}>{props.children}
-</code>
+            <code className={props.className}>{props.children}</code>
 
 <style jsx> 
 {
@@ -20,10 +19,10 @@ export default function Code(props) {
           code {
       padding:5% 5% 0 0;
       background-color:rgb(0, 0, 0, 0.03);
+      display: block;
+      white-space: pre;   
     }
-    .display-linebreak {
-        white-space: pre;
-      }
+  
       
     }
 
@@ -32,6 +31,8 @@ export default function Code(props) {
   padding:5% 5% 0 0;
   background-color:rgb(0, 0, 0, 0.03);
   font-size: 14px;
+  display: block;
+  white-space: pre-wrap   
 }
 .display-linebreak {
     white-space: pre;

@@ -4,7 +4,7 @@ export default function Background(props) {
 
     return (
       <div className="Background">
-      <Image src={props.src} width="2298" height="1800" />
+      <img src={props.src} width="100%" height="auto" />
       <p className="Caption">
           <i>{props.title}</i>. (<a
             href={props.url}
