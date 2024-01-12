@@ -28,13 +28,13 @@ function Blog_12_26_2023(props) {
 
         <img src="/static/blog_12_26_2023/n5_sol2.jpg" width="100%"/> 
 
-        <p>We can simplify this problem by noticing that two queens can't occupy the same row or column (since they'd be attacking each other).</p> 
+        <p>We can simplify thinking about this problem by noticing that two queens can't occupy the same row or column (since they'd be attacking each other).</p> 
         <p>Then, we can try all combinations row by row, taking care that the block we place a queen in isn't being attacked by a queen from the rows above it.</p>
         <p> Here is how the recursion tree would look for a 4x4 board: </p>
         <img src="/static/blog_12_26_2023/n4_recursion.png" width="100%"/> 
         <p>And the pseudocode: 
         <img src="/static/blog_12_26_2023/pseudocode.png" width="100%"/> 
-        both with permission from Jeff Erickson's <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/">textbook.</a> </p>
+        both with permission from Jeff Erickson's <a target="_blank" href="https://jeffe.cs.illinois.edu/teaching/algorithms/">textbook.</a> </p>
 
         <p> The first two lines just say that if we are done placing the final Q (i.e. the row is one greater than the grid size) print the result. </p>
 
