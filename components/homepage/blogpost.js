@@ -26,7 +26,7 @@ export default function BlogPost(props) {
             @media (max-width: 700px) {
 
               .Blog {
-                height: 32vh;
+                height:40vh;
                 margin-bottom: 5vh;
               }
             }
@@ -59,6 +59,7 @@ function PostDetails(props) {
                 width: 95%;
                 padding-left: 5%;
                 height: 10vh;
+                padding-bottom:1%;
             
                 overflow: hidden;
               }

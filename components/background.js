@@ -10,7 +10,7 @@ export default function Background(props) {
             href={props.url}
             target="_blank"
           >
-            Artic
+            Source
           </a>)
         </p>
   
@@ -19,8 +19,6 @@ export default function Background(props) {
         @media (max-width: 720px) {
           .Background {
             position: relative;
-            grid-row: 1/1;
-            grid-column: 1/1;
             height: 100%;
             width: 100%;
             margin-left: 10
@@ -30,8 +28,6 @@ export default function Background(props) {
         @media (min-width: 720px) {
           .Background {
             position: relative;
-            grid-row: 1/1;
-            grid-column: 2/3;
             height: 100%;
             width: 100%;
             margin-left: 10

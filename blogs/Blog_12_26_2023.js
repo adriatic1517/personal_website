@@ -21,7 +21,7 @@ function Blog_12_26_2023(props) {
 
         <img src="/static/blog_12_26_2023/n5_sol.jpg" width="100%"/> 
 
-        <p> We can confirm (excuse the drawing) that no queens attach each other. A queen can move diagonally, horizationally & vertically. </p>
+        <p> We can confirm that no queens attach each other. A queen can move diagonally, horizationally & vertically. </p>
         <img src="/static/blog_12_26_2023/n5_sol1.jpg" width="100%"/> 
         <p> You should verify this holds for the other queens.</p>
         <p> Here you can see that no attacking line (extended using color of originating Q) passes through any of the Queens:</p>
@@ -36,9 +36,9 @@ function Blog_12_26_2023(props) {
         <img src="/static/blog_12_26_2023/pseudocode.png" width="100%"/> 
         both with permission from Jeff Erickson's <a target="_blank" href="https://jeffe.cs.illinois.edu/teaching/algorithms/">textbook.</a> </p>
 
-        <p> The first two lines just say that if we are done placing the final Q (i.e. the row is one greater than the grid size) print the result. </p>
+        <p> The first two lines say that if we are done placing the final Q (i.e. the row is one greater than the grid size) print the result. </p>
 
-        <p> The next line says go over each column and checks if this block is under attack according to the following conditions.</p>
+        <p> The next block of lines says go over each column and checks if this block is under attack according to the following conditions.</p>
 
         <ol> 
           <li>Q[i] = j: a preceding row (i) has a Q in column j</li>

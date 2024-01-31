@@ -4,11 +4,13 @@ import styles from "../../styles/Blog.module.css";
 import { Blog_10_16_2022 } from "../../blogs";
 import { Blog_11_27_2023 } from "../../blogs";
 import { Blog_12_26_2023 } from "../../blogs";
+import { Blog_01_30_2024 } from "../../blogs";
 
 const Blogs = {
   Blog_10_16_2022,
   Blog_11_27_2023,
-  Blog_12_26_2023
+  Blog_12_26_2023, 
+  Blog_01_30_2024
 };
 
 export default function Post({ postData }) {
