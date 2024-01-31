@@ -21,16 +21,24 @@ export default function Background(props) {
             position: relative;
             height: 100%;
             width: 100%;
-            margin-left: 10
+            padding-left: 2vw;
+            padding-top: 2vw;
+            padding-right: 2vw;
+            grid-column: 1/1;
+            grid-row:1/1;
+
+
           }
         }
 
         @media (min-width: 720px) {
           .Background {
+            grid-column: 2/3;
+            grid-row:1/1;
+
             position: relative;
             height: 100%;
             width: 100%;
-            margin-left: 10
           }
         }
         `

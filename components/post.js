@@ -5,9 +5,8 @@ export default function Post(props) {
     return (
         <div className="Post">
 
-          <div className="Background"><Background src={props.bg_image} width="600" height="1800" title={props.bg_title} url={props.bg_url} />
+          <Background src={props.bg_image} width="600" height="1800" title={props.bg_title} url={props.bg_url} />
 
-</div>
 
   
           <div className="Content">
@@ -44,8 +43,6 @@ export default function Post(props) {
 
           
               .Background {
-                grid-column: 2/3;
-                grid-row:1/1;
                 width: 50vw;
                 color: black;
                 text-align:center;
@@ -87,11 +84,7 @@ export default function Post(props) {
   
             @media (max-width: 720px) {
               
-              .Background {
-                grid-column: 2/3;
-                grid-row:1/1;
-               }
-   
+            
               .Post {
                 display: grid;
                 grid-template-rows: auto;
