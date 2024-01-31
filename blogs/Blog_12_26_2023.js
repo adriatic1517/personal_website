@@ -11,7 +11,7 @@ function Blog_12_26_2023(props) {
         heading="N Queens"
         date="19th December 2023">
 
-       <p>We have to place <i>n</i> queens on a an <i>n*n </i>chessboard so that no two queens are attacking each other.  </p>
+       <p>We have to place <i>n</i> queens on a <i>n*n </i>chessboard so that no two queens are attacking each other.  </p>
 
        <p> Below we have a chessboard where n=5: </p>
 
