@@ -3,6 +3,8 @@ import Code from "../components/code"
 import Image from "next/image";
 import Background from "../components/background";
 
+
+
 function Blog_01_30_2024(props) {
       return (
       <Post bg_image={props.postData.bg_image}
