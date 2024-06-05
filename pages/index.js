@@ -65,7 +65,7 @@ class AboutMe extends React.Component {
             {" "}
             LinkedIn{" "}
           </a>{" "}
-          |<a href="https://www.github.com/adriatic1517"> GitHub</a> 
+          |<a href="https://www.github.com/emad10101"> GitHub</a> 
           |<a href="https://docs.google.com/document/d/1Arf0A1_9D6eAew49qxsM57Nhh2Nqw_Vj7TYoWBiwSzY/edit"> CS Resources</a>
 
 
